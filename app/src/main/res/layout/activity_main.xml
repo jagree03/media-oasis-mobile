@@ -4,70 +4,182 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/text_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="@string/welcome"
-        android:textSize="42sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/imageViewMediaOasisLogo"
+        android:layout_width="391dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="14dp"
+        android:contentDescription="@string/mediaOasisLogoContentDescription"
+        app:layout_constraintBottom_toTopOf="@+id/textViewMobileAppHeader"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
+        app:srcCompat="@drawable/media_oasis_logo" />
 
-    <LinearLayout
-        android:id="@+id/linearlayout_0"
+    <TextView
+        android:id="@+id/textViewMobileAppHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="415dp"
-        android:layout_marginEnd="81dp"
-        android:layout_marginBottom="64dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/frutiger"
+        android:text="@string/mobileAppHeader"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewSplash"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_welcome">
+        app:layout_constraintTop_toBottomOf="@+id/imageViewMediaOasisLogo" />
+
+    <ImageView
+        android:id="@+id/imageViewSplash"
+        android:layout_width="409dp"
+        android:layout_height="270dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_InfoFieldsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMobileAppHeader"
+        app:srcCompat="@drawable/splash"
+        android:contentDescription="@string/splashContentDescription"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_InfoFieldsContainer"
+        android:layout_width="309dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="52dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSplash">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_UsernameBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewUsername"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/frutiger"
+                android:text="@string/username"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextUsernameInput"
+                android:layout_width="180dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/editTextBackground"
+                android:ems="10"
+                android:hint="@string/usernameHint"
+                android:autofillHints="username"
+                android:inputType="text"
+                android:text=""
+                android:textColorHint="@color/editTextHintColour" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_PasswordBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewPassword"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/frutiger"
+                android:text="@string/password"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextPasswordInput"
+                android:layout_width="180dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/editTextBackground"
+                android:ems="10"
+                android:hint="@string/passwordHint"
+                android:autofillHints="password"
+                android:inputType="textPassword"
+                android:text=""
+                android:textColorHint="@color/editTextHintColour" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_buttonsContainer"
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textViewForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_InfoFieldsContainer">
 
         <Button
             android:id="@+id/button_login"
-            android:layout_width="250dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#FF5050"
-            android:fontFamily="sans-serif-condensed-light"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/frutiger"
             android:text="@string/login"
+            android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button_register"
-            android:layout_width="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#FF5050"
-            android:fontFamily="sans-serif-condensed-light"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/frutiger"
             android:text="@string/register"
+            android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/text_forgotPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-light"
-            android:lineSpacingExtra="14sp"
-            android:paddingTop="20dp"
-            android:text="@string/forgotPassword"
-            android:textAlignment="center" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/frutiger"
+        android:text="@string/forgotPassword"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
