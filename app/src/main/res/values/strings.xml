@@ -11,4 +11,15 @@
     <string name="usernameHint">Enter username</string>
     <string name="password">Password:</string>
     <string name="passwordHint">*****</string>
+    <string name="registrationHeader">Let\'s get your account ready!</string>
+    <string name="firstName">First name:</string>
+    <string name="firstNameHint">Enter first name</string>
+    <string name="lastName">Last name:</string>
+    <string name="lastNameHint">Enter last name</string>
+    <string name="email">Email address:</string>
+    <string name="emailHint">Enter email</string>
+    <string name="phoneNo">Phone no:</string>
+    <string name="phoneNoHint">Enter phone number</string>
+    <string name="show">Show</string>
+    <string name="hide">Hide</string>
 </resources>
