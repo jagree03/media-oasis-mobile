@@ -22,4 +22,5 @@
     <string name="phoneNoHint">Enter phone number</string>
     <string name="show">Show</string>
     <string name="hide">Hide</string>
+    <string name="menu">Menu</string>
 </resources>
