@@ -4,14 +4,14 @@
     <string name="login">Sign In</string>
     <string name="register">Register</string>
     <string name="forgotPassword">Forgot your password?</string>
-    <string name="mobileAppHeader">Mobile App by Jagjeet Reehal (jagree03) - 2024</string>
+    <string name="mobileAppHeader">Mobile App by Jagjeet Reehal (jagree03) 2024</string>
     <string name="mediaOasisLogoContentDescription">The logo of Media Oasis, your ultimate escape into entertainment</string>
     <string name="splashContentDescription">A man at the DVD section in a local shop, searching through content</string>
     <string name="username">Username:</string>
     <string name="usernameHint">Enter username</string>
     <string name="password">Password:</string>
     <string name="passwordHint">*****</string>
-    <string name="registrationHeader">Let\'s get your account ready!</string>
+    <string name="registrationHeader">Lets get your account ready!</string>
     <string name="firstName">First name:</string>
     <string name="firstNameHint">Enter first name</string>
     <string name="lastName">Last name:</string>
