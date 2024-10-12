@@ -20,7 +20,7 @@
     <string name="emailHint">Enter email</string>
     <string name="phoneNo">Phone no:</string>
     <string name="phoneNoHint">Enter phone number</string>
-    <string name="show">Show</string>
-    <string name="hide">Hide</string>
+    <string name="show">Show Password</string>
+    <string name="hide">Hide Password</string>
     <string name="menu">Menu</string>
 </resources>

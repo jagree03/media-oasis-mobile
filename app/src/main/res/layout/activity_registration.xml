@@ -10,12 +10,8 @@
 
     <ImageView
         android:id="@+id/imageViewMediaOasisLogo"
-        android:layout_width="391dp"
-        android:layout_height="137dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="353dp"
+        android:layout_height="109dp"
         android:contentDescription="@string/mediaOasisLogoContentDescription"
         app:layout_constraintBottom_toTopOf="@+id/textViewRegistrationHeader"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,28 +23,29 @@
         android:id="@+id/textViewRegistrationHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="55dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/registrationHeader"
         android:textColor="#F8F5F5"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout_RegistrationForm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewMediaOasisLogo" />
 
     <LinearLayout
         android:id="@+id/linearLayout_RegistrationForm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="51dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button_register"
-        app:layout_constraintEnd_toStartOf="@+id/button_showhidepassword"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintBottom_toTopOf="@+id/button_showhidepassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegistrationHeader">
 
         <LinearLayout
             android:id="@+id/linearLayout_FirstNameBox"
@@ -79,6 +76,7 @@
                 android:hint="@string/firstNameHint"
                 android:inputType="text"
                 android:text=""
+                android:textColor="@color/grey"
                 android:textColorHint="@color/editTextHintColour" />
         </LinearLayout>
 
@@ -111,6 +109,7 @@
                 android:hint="@string/lastNameHint"
                 android:inputType="text"
                 android:text=""
+                android:textColor="@color/grey"
                 android:textColorHint="@color/editTextHintColour" />
         </LinearLayout>
 
@@ -130,7 +129,7 @@
                 android:text="@string/email"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="16dp" />
 
             <EditText
                 android:id="@+id/editTextEmailInput"
@@ -143,6 +142,7 @@
                 android:hint="@string/emailHint"
                 android:inputType="textEmailAddress"
                 android:text=""
+                android:textColor="@color/grey"
                 android:textColorHint="@color/editTextHintColour" />
         </LinearLayout>
 
@@ -174,7 +174,9 @@
                 android:ems="10"
                 android:hint="@string/phoneNoHint"
                 android:inputType="phone"
+                android:maxLength="11"
                 android:text=""
+                android:textColor="@color/grey"
                 android:textColorHint="@color/editTextHintColour" />
         </LinearLayout>
 
@@ -207,6 +209,7 @@
                 android:hint="@string/usernameHint"
                 android:inputType="text"
                 android:text=""
+                android:textColor="@color/grey"
                 android:textColorHint="@color/editTextHintColour" />
         </LinearLayout>
 
@@ -238,6 +241,7 @@
                 android:hint="@string/passwordHint"
                 android:inputType="textPassword"
                 android:text=""
+                android:textColor="@color/grey"
                 android:textColorHint="@color/editTextHintColour" />
         </LinearLayout>
 
@@ -246,11 +250,8 @@
     <Button
         android:id="@+id/button_showhidepassword"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="80dp"
+        android:layout_width="140dp"
         android:layout_height="48dp"
-        android:layout_marginTop="352dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="130dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
@@ -258,29 +259,59 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        android:onClick="showHidePassword"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout_RegistrationForm"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRegistrationHeader" />
+        app:layout_constraintEnd_toStartOf="@+id/button_register"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_RegistrationForm" />
 
     <Button
         android:id="@+id/button_register"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="145dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="29dp"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
+        android:onClick="validateInformation"
         android:text="@string/register"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_showhidepassword"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_RegistrationForm" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="386dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="702dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
