@@ -23,4 +23,12 @@
     <string name="show">Show Password</string>
     <string name="hide">Hide Password</string>
     <string name="menu">Menu</string>
+    <string name="itemTitle">Item Title</string>
+    <string name="itemPrice">£ 0.00</string>
+    <string name="itemDescription">Item Description</string>
+    <string name="itemRatingCount">0</string>
+    <string name="purchase">Purchase</string>
+    <string name="prevButtonContentDescription">Previous Button, Touch to go back to the previous item.</string>
+    <string name="nextButtonContentDescription">Next Button, Touch to go to the next item.</string>
+    <string name="itemImageContentDescription">This is the image of the item on sale</string>
 </resources>

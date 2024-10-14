@@ -7,4 +7,5 @@
     <color name="buttonPurple">#64548E</color>
     <color name="editTextBackground">#201F29</color>
     <color name="editTextHintColour">#43FFFFFF</color>
+    <color name="ratingBarGold">#EDC71C</color>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.jagree03.mediaoasis
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
@@ -77,5 +78,12 @@ class RegistrationActivity : AppCompatActivity() {
         var error: String = ""
 
         return error
+    }
+
+    fun debugGoToMenu(view: View) {
+        val send = Intent(this, MenuActivity::class.java)
+
+        startActivity(send)
+
     }
 }

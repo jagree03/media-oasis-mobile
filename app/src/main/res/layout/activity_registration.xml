@@ -274,7 +274,7 @@
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
-        android:onClick="validateInformation"
+        android:onClick="debugGoToMenu"
         android:text="@string/register"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -290,7 +290,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="386dp" />
+        app:layout_constraintGuide_end="16dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -304,14 +304,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="702dp" />
+        app:layout_constraintGuide_end="16dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="16dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
