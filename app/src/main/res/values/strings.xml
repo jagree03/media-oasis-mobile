@@ -31,4 +31,6 @@
     <string name="prevButtonContentDescription">Previous Button, Touch to go back to the previous item.</string>
     <string name="nextButtonContentDescription">Next Button, Touch to go to the next item.</string>
     <string name="itemImageContentDescription">This is the image of the item on sale</string>
+    <string name="profileSettings">Profile Settings</string>
+    <string name="updateInfo">Update Information</string>
 </resources>

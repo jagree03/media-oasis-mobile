@@ -6,46 +6,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".RegistrationActivity">
+    tools:context=".ProfileSettingsActivity">
 
-    <ImageView
-        android:id="@+id/imageViewMediaOasisLogo"
-        android:layout_width="353dp"
-        android:layout_height="109dp"
-        android:contentDescription="@string/mediaOasisLogoContentDescription"
-        app:layout_constraintBottom_toTopOf="@+id/textViewRegistrationHeader"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/media_oasis_logo" />
-
-    <TextView
-        android:id="@+id/textViewRegistrationHeader"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="55dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMenuHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="42dp"
         android:fontFamily="@font/frutiger_fontfamily"
-        android:text="@string/registrationHeader"
+        android:text="@string/profileSettings"
+        android:textAlignment="center"
         android:textColor="#F8F5F5"
-        android:textSize="24sp"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout_RegistrationForm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewMediaOasisLogo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout_RegistrationForm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="51dp"
+        android:layout_marginBottom="110dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button_showhidepassword"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_ButtonsBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRegistrationHeader">
+        app:layout_constraintTop_toBottomOf="@+id/textViewMenuHeader">
 
         <LinearLayout
             android:id="@+id/linearLayout_FirstNameBox"
@@ -73,7 +94,6 @@
                 android:autofillHints="name"
                 android:background="@color/editTextBackground"
                 android:ems="10"
-                android:hint="@string/firstNameHint"
                 android:inputType="text"
                 android:text=""
                 android:textColor="@color/grey"
@@ -106,7 +126,6 @@
                 android:autofillHints="name"
                 android:background="@color/editTextBackground"
                 android:ems="10"
-                android:hint="@string/lastNameHint"
                 android:inputType="text"
                 android:text=""
                 android:textColor="@color/grey"
@@ -129,7 +148,7 @@
                 android:text="@string/email"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/editTextEmailInput"
@@ -139,7 +158,6 @@
                 android:autofillHints="emailAddress"
                 android:background="@color/editTextBackground"
                 android:ems="10"
-                android:hint="@string/emailHint"
                 android:inputType="textEmailAddress"
                 android:text=""
                 android:textColor="@color/grey"
@@ -172,7 +190,6 @@
                 android:autofillHints="phone"
                 android:background="@color/editTextBackground"
                 android:ems="10"
-                android:hint="@string/phoneNoHint"
                 android:inputType="phone"
                 android:maxLength="11"
                 android:text=""
@@ -206,7 +223,6 @@
                 android:autofillHints="username"
                 android:background="@color/editTextBackground"
                 android:ems="10"
-                android:hint="@string/usernameHint"
                 android:inputType="text"
                 android:text=""
                 android:textColor="@color/grey"
@@ -238,7 +254,6 @@
                 android:autofillHints="name"
                 android:background="@color/editTextBackground"
                 android:ems="10"
-                android:hint="@string/passwordHint"
                 android:inputType="textPassword"
                 android:text=""
                 android:textColor="@color/grey"
@@ -247,71 +262,46 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_showhidepassword"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:layout_weight="1"
-        android:background="@drawable/rounded_corner"
-        android:fontFamily="@font/frutiger_fontfamily"
-        android:text="@string/show"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:onClick="showHidePassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_register"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_RegistrationForm" />
-
-    <Button
-        android:id="@+id/button_register"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:layout_weight="1"
-        android:background="@drawable/rounded_corner"
-        android:fontFamily="@font/frutiger_fontfamily"
-        android:onClick="validateInformation"
-        android:text="@string/register"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
+    <LinearLayout
+        android:id="@+id/linearLayout_ButtonsBox"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_showhidepassword"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_RegistrationForm" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp" />
+        <Button
+            android:id="@+id/button_showhidepassword"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/frutiger_fontfamily"
+            android:onClick="showHidePassword"
+            android:text="@string/show"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="32dp" />
+        <Button
+            android:id="@+id/button_updateInformation"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/frutiger_fontfamily"
+            android:text="@string/updateInfo"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="16dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
-
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
