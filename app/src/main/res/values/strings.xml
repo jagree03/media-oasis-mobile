@@ -33,4 +33,6 @@
     <string name="itemImageContentDescription">This is the image of the item on sale</string>
     <string name="profileSettings">Profile Settings</string>
     <string name="updateInfo">Update Information</string>
+    <string name="catalog">Catalog</string>
+    <string name="logout">Logout</string>
 </resources>
