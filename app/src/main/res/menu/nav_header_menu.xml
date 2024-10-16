@@ -3,12 +3,10 @@
 
     <item
         android:id="@+id/buyMenu"
-        android:title="@string/catalog">
-    </item>
+        android:title="@string/catalog"/>
 
     <item
         android:id="@+id/logout"
-        android:title="@string/logout">
-    </item>
+        android:title="@string/logout"/>
 
 </menu>

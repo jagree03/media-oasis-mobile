@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun debugGoToAnyActivity() {
-        val send = Intent(this, ProfileSettingsActivity::class.java)
+        val send = Intent(this, MenuActivity::class.java)
 
         startActivity(send)
     }
