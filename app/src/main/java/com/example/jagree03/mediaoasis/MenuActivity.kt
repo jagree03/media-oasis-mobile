@@ -1,6 +1,7 @@
 package com.example.jagree03.mediaoasis
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
@@ -53,15 +54,34 @@ class MenuActivity : AppCompatActivity() {
             when(it.itemId) { // it refers to the current menu item that was clicked on, we want to respond to the id of that item, the id's provided in the menu resource file.
                 R.id.buyMenu -> Toast.makeText(applicationContext, "Buy Menu", Toast.LENGTH_SHORT).show()
                 R.id.logout -> {
+
                     // Reference: alertDialog code by 'Aman Alam' from https://stackoverflow.com/questions/4850493/how-to-open-a-dialog-when-i-click-a-button
                     // converted from Java to Kotlin by Android Studio IDE converter
-                    val alertDialog: AlertDialog = androidx.appcompat.app.AlertDialog.Builder(this).create()
-                    alertDialog.setTitle("Message")
-                    alertDialog.setMessage("Are you sure you want to log out?")
-                    alertDialog.show()
+                    val builder = AlertDialog.Builder(this)
                     val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                    finish() // kills the previous activity
+                    
+                    builder.setMessage("Are you sure you want to log out?")
+
+                    builder.setPositiveButton("Yes", object : DialogInterface.OnClickListener {
+                        override fun onClick(dialog: DialogInterface?, which: Int) {
+                            Toast.makeText(applicationContext, "Logging out...", Toast.LENGTH_SHORT).show()
+                            startActivity(intent)
+                            finish() // kills the previous activity
+                        }
+                    })
+
+                    builder.setNegativeButton("No", object : DialogInterface.OnClickListener {
+                        override fun onClick(dialog: DialogInterface?, which: Int) {
+                            if (dialog != null) {
+                                dialog.dismiss()
+                            }
+                        }
+                    })
+
+                    builder.create()
+                    builder.show()
+
+
                 }
             }
             true // return this lambda expression and return true means click event has been handled
