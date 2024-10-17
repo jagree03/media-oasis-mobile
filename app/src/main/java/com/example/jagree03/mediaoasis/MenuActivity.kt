@@ -52,7 +52,18 @@ class MenuActivity : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId) { // it refers to the current menu item that was clicked on, we want to respond to the id of that item, the id's provided in the menu resource file.
-                R.id.buyMenu -> Toast.makeText(applicationContext, "Buy Menu", Toast.LENGTH_SHORT).show()
+                R.id.buyMenu -> {
+
+                    Toast.makeText(applicationContext, "Entering product catalog...", Toast.LENGTH_SHORT).show()
+
+                    val buyMenuFragment = BuyMenuFragment()
+
+                    supportFragmentManager.beginTransaction().apply { // begin fragment transaction operation
+                        replace(R.id.frameLayout, buyMenuFragment) // replacing the fragment in the frameLayout container of the activity with the buy menu fragment
+                        addToBackStack(null) // allows you to go back with android back arrow navigation key
+                        commit() // applying the replacement operation and commiting the transaction
+                    }
+                }
                 R.id.logout -> {
 
                     // Reference: alertDialog code by 'Aman Alam' from https://stackoverflow.com/questions/4850493/how-to-open-a-dialog-when-i-click-a-button
