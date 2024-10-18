@@ -7,7 +7,8 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.Spinner
-import android.widget.ArrayAdapter
+
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -20,8 +21,6 @@ import com.google.android.material.navigation.NavigationView
 import kotlin.time.Duration
 
 class MenuActivity : AppCompatActivity() {
-
-    //val spinnerItems = arrayOf("Movies", "Video Games", "TV Show Sets")
 
     lateinit var toggle: ActionBarDrawerToggle // toggling the slider navigation view
 
@@ -38,10 +37,8 @@ class MenuActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        // setupSpinner()
 
-
-
+        ///////////// Navigation Drawer + Toggle
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
 
@@ -97,7 +94,7 @@ class MenuActivity : AppCompatActivity() {
             }
             true // return this lambda expression and return true means click event has been handled
         }
-    }
+    } // end of onCreate method
 
     /**
      * onOptionsItemSelected must be overrided to respond correctly to clicks on the toggle
@@ -109,16 +106,4 @@ class MenuActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
-//    /**
-//     * This code setups the spinner by attaching an arrayAdapter
-//     * Code reference: https://www.youtube.com/watch?v=lAckLFH7mIE
-//     */
-//    fun setupSpinner() {
-//        val spinner = findViewById<Spinner>(R.id.spinnerItemSelect)
-//        val arrayAdapterSpinner = ArrayAdapter<String>(this, R.layout.spinner_item, spinnerItems)
-//        spinner.adapter = arrayAdapterSpinner
-//    }
-
-
 }
