@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
-import androidx.lifecycle.findViewTreeLifecycleOwner
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,7 +48,7 @@ class BuyMenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Accessing the elements inside the view of this fragment
-        val purchaseButton: Button = view.findViewById(R.id.button_purchase)
+        val purchaseButton: Button = view.findViewById(R.id.button_checkOut)
 
         setupSpinner(view) // setup the spinner's items using ArrayAdapter.
 
@@ -96,10 +95,10 @@ class BuyMenuFragment : Fragment() {
     }
 
     /**
-     * This method starts the Shopping Cart Activity, passing along data of items added to the cart.
+     * This method starts the Purchase Activity, passing along data of items added to the cart.
      */
-    fun goToShoppingCartActivity() {
-        val send = Intent(activity, ShoppingCartActivity::class.java)
+    fun goToPurchaseActivity() {
+        val send = Intent(activity, PurchaseActivity::class.java)
 
         startActivity(send)
     }

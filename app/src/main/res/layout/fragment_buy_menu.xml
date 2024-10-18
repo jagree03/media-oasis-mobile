@@ -193,13 +193,13 @@
         android:scaleX="0.8"
         android:scaleY="0.8"
         android:stepSize="0.5"
-        app:layout_constraintBottom_toTopOf="@+id/button_purchase"
+        app:layout_constraintBottom_toTopOf="@+id/button_checkOut"
         app:layout_constraintEnd_toStartOf="@+id/textViewItemRatingCount"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewItemDescription" />
 
     <Button
-        android:id="@+id/button_purchase"
+        android:id="@+id/button_checkOut"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="140dp"
         android:layout_height="48dp"
