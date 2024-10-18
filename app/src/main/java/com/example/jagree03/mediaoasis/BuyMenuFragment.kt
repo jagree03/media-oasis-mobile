@@ -91,7 +91,7 @@ class BuyMenuFragment : Fragment() {
         spinner.adapter = arrayAdapterSpinner
     }
 
-    fun addToCart() {
+    fun addToCart(view: View) {
         Toast.makeText(activity, "Added to cart", Toast.LENGTH_SHORT)
     }
 
