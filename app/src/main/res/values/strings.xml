@@ -46,9 +46,13 @@
     <string name="checkout">Check out</string>
     <string name="payment">Payment</string>
     <string name="cardholder_name">Cardholder name:</string>
+    <string name="cardholder_name_hint">Enter cardholder name</string>
     <string name="card_number">Card number:</string>
+    <string name="card_number_hint">Enter card number</string>
     <string name="card_expiration_date">Card expiration date:</string>
+    <string name="card_expiration_date_hint">MM/YY</string>
     <string name="card_security_code">Security code (CVV):</string>
+    <string name="card_security_code_hint">Enter card CVV</string>
     <string name="save_payment_details">Save payment details</string>
     <string name="pay">Pay</string>
 </resources>

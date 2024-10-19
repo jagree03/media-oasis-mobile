@@ -80,5 +80,195 @@
         app:layout_constraintStart_toEndOf="@+id/imageButtonCard"
         tools:layout_editor_absoluteY="104dp" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout_PaymentForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="270dp">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_CardholderNameBox"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewCardholderName"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/frutiger_fontfamily"
+                android:text="@string/cardholder_name"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/editTextCardholderNameInput"
+                android:layout_width="180dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:autofillHints="name"
+                android:background="@color/editTextBackground"
+                android:ems="10"
+                android:hint="@string/cardholder_name_hint"
+                android:inputType="text"
+                android:text=""
+                android:textColor="@color/grey"
+                android:textColorHint="@color/editTextHintColour" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_CardNumberBox"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewCardNumber"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/frutiger_fontfamily"
+                android:text="@string/card_number"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/editTextCardNumberInput"
+                android:layout_width="180dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:autofillHints="name"
+                android:background="@color/editTextBackground"
+                android:ems="10"
+                android:hint="@string/card_number_hint"
+                android:inputType="number"
+                android:maxLength="16"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/editTextHintColour" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_CardExpirationDateBox"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewCardExpiration"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/frutiger_fontfamily"
+                android:text="@string/card_expiration_date"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextCardExpirationInput"
+                android:layout_width="180dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:autofillHints="emailAddress"
+                android:background="@color/editTextBackground"
+                android:ems="10"
+                android:hint="@string/card_expiration_date_hint"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/editTextHintColour" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_CardCVVBox"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewCardCVV"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/frutiger_fontfamily"
+                android:text="@string/card_security_code"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/editTextCardCVVInput"
+                android:layout_width="180dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:autofillHints="phone"
+                android:background="@color/editTextBackground"
+                android:ems="10"
+                android:hint="@string/card_security_code_hint"
+                android:inputType="number"
+                android:maxLength="3"
+                android:text=""
+                android:textColor="@color/grey"
+                android:textColorHint="@color/editTextHintColour" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switch_SavePaymentDetails"
+        android:layout_width="205dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:showText="false"
+        android:text="@string/save_payment_details"
+        android:textAlignment="textStart"
+        android:textColor="@color/grey"
+        android:textDirection="locale"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="540dp" />
+
+    <TextView
+        android:id="@+id/textViewOrderTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/ordertotal"
+        android:textAlignment="center"
+        android:textColor="#F8F5F5"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="602dp" />
+
+    <Button
+        android:id="@+id/button_pay"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:onClick="goToCheckOut"
+        android:text="@string/pay"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="656dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
