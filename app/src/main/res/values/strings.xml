@@ -45,6 +45,7 @@
     <string name="shoppingcartContentDescription">Shopping Cart Screen</string>
     <string name="ordertotal">Order Total: £ 0.00</string>
     <string name="checkout">Check out</string>
+
     <string name="payment">Payment</string>
     <string name="cardContentDescription">Credit or Debit Card</string>
     <string name="paypalContentDescription">Shopping Cart</string>
@@ -58,4 +59,10 @@
     <string name="card_security_code_hint">Enter card CVV</string>
     <string name="save_payment_details">Save payment details</string>
     <string name="pay">Pay</string>
+
+    <string name="orderConfirmed">Order Confirmed.</string>
+    <string name="orderConfirmed_Checkmark">A green checkmark image showcasing that the order has been successfully confirmed.</string>
+    <string name="orderConfirmed_ReceiveNotifications">You will receive notifications regarding your order.</string>
+    <string name="orderConfirmed_CheckStatus">Check the status of your order in View Orders for further updates.</string>
+    <string name="goHome">Go home</string>
 </resources>
