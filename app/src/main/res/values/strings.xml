@@ -66,4 +66,10 @@
     <string name="orderConfirmed_ReceiveNotifications">You will receive notifications regarding your order.</string>
     <string name="orderConfirmed_CheckStatus">Check the status of your order in View Orders for further updates.</string>
     <string name="goHome">Go home</string>
+
+    <string name="addAReview">Add a review</string>
+    <string name="review">Review</string>
+    <string name="reviewHint">Enter your review here</string>
+    <string name="submit">Submit</string>
+
 </resources>
