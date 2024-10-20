@@ -9,9 +9,9 @@ This application aims to be a general improvement over my previous project, Caf√
 
 Such improvements include
 - Improved UI/UX design with a gentle purple colour, white text and sleek 2000s Frutiger font
-- Implementation of a slidable navigation view
+- Implementation of a slidable navigation view menu
 - Fragments to reduce the number of activities of the application
-- Notification System
+- Notification system
 
 **Tools**
 - Android Studio + Android Virtual Device Emulation
