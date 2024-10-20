@@ -56,37 +56,49 @@
         android:id="@+id/imageButtonCard"
         android:layout_width="153dp"
         android:layout_height="156dp"
+        android:layout_marginTop="35dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         android:scaleX="1.2"
         android:scaleY="1.2"
         android:src="@drawable/credit_debit_card"
+        android:contentDescription="@string/cardContentDescription"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonPayPal"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="104dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewMenuHeader" />
 
     <ImageButton
         android:id="@+id/imageButtonPayPal"
         android:layout_width="153dp"
         android:layout_height="156dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="10dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         android:scaleX="0.8"
         android:scaleY="0.8"
         android:src="@drawable/paypal"
+        android:contentDescription="@string/paypalContentDescription"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_PaymentForm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageButtonCard"
-        tools:layout_editor_absoluteY="104dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewMenuHeader" />
 
     <LinearLayout
         android:id="@+id/linearLayout_PaymentForm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="14dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="270dp">
+        app:layout_constraintBottom_toTopOf="@+id/switch_SavePaymentDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonCard">
 
 
         <LinearLayout
@@ -222,14 +234,15 @@
         </LinearLayout>
 
 
-
-
     </LinearLayout>
 
     <Switch
         android:id="@+id/switch_SavePaymentDetails"
         android:layout_width="205dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="32dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:showText="false"
         android:text="@string/save_payment_details"
@@ -238,37 +251,45 @@
         android:textDirection="locale"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="540dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textViewOrderTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewOrderTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="22dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/ordertotal"
         android:textAlignment="center"
         android:textColor="#F8F5F5"
         android:textSize="28sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="602dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button_pay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_pay"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="140dp"
         android:layout_height="48dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="27dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
-        android:onClick="goToCheckOut"
         android:text="@string/pay"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="656dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

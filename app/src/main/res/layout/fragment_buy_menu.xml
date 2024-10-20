@@ -233,6 +233,7 @@
         android:scaleX="0.6"
         android:scaleY="0.6"
         android:src="@drawable/shopping_cart"
+        android:contentDescription="@string/shoppingcartContentDescription"
         app:layout_constraintBottom_toTopOf="@+id/imageViewItemImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/spinnerItemSelect"
