@@ -71,7 +71,16 @@
     <string name="review">Review</string>
     <string name="reviewHint">Enter your review here</string>
     <string name="submit">Submit</string>
-    
+
     <string name="viewReview">View reviews</string>
+
+
+    <!-- Admin Panel -->
+    <string name="manageSaleItems">Manage Sale Items</string>
+    <string name="manageCustomerOrders">Manage Customer Orders</string>
+    <string name="manageRegisteredAccounts">Manage Registered Accounts</string>
+    <string name="managePaymentData">Manage Payment Data</string>
+    <string name="manageReviews">Manage Reviews</string>
+    <string name="manageAdminProfile">Manage Admin Profile</string>
 
 </resources>

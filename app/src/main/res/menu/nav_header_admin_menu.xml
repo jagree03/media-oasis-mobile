@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/manageSaleItems"
+        android:title="@string/manageSaleItems"/>
+
+    <item
+        android:id="@+id/manageCustomerOrders"
+        android:title="@string/manageCustomerOrders"/>
+
+    <item
+        android:id="@+id/manageRegisteredAccounts"
+        android:title="@string/manageRegisteredAccounts"/>
+
+    <item
+        android:id="@+id/managePaymentData"
+        android:title="@string/managePaymentData"/>
+
+    <item
+        android:id="@+id/manageReviews"
+        android:title="@string/manageReviews"/>
+
+    <item
+        android:id="@+id/manageAdminProfile"
+        android:title="@string/manageAdminProfile"/>
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout"/>
+
+</menu>
