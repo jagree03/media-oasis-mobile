@@ -34,6 +34,7 @@
     <string name="profileSettings">Profile Settings</string>
     <string name="updateInfo">Update Information</string>
     <string name="catalog">Catalog</string>
+    <string name="myOrders">My Orders</string>
     <string name="logout">Logout</string>
     <string name="open">Opening navigation drawer</string>
     <string name="close">Closing navigation drawer</string>

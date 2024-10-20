@@ -61,6 +61,21 @@ class MenuActivity : AppCompatActivity() {
                         commit() // applying the replacement operation and commiting the transaction
                     }
                 }
+
+                R.id.myOrders -> {
+
+                    Toast.makeText(applicationContext, "Entering my orders page...", Toast.LENGTH_SHORT).show()
+
+                    val myOrdersFragment = MyOrdersFragment()
+
+                    supportFragmentManager.beginTransaction().apply { // begin fragment transaction operation
+                        replace(R.id.frameLayout, myOrdersFragment) // replacing the fragment in the frameLayout container of the activity with the buy menu fragment
+                        addToBackStack(null) // allows you to go back with android back arrow navigation key
+                        commit() // applying the replacement operation and commiting the transaction
+                    }
+                }
+
+
                 R.id.logout -> {
 
                     // Reference: alertDialog code by 'Aman Alam' from https://stackoverflow.com/questions/4850493/how-to-open-a-dialog-when-i-click-a-button
