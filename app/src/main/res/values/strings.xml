@@ -82,5 +82,27 @@
     <string name="managePaymentData">Manage Payment Data</string>
     <string name="manageReviews">Manage Reviews</string>
     <string name="manageAdminProfile">Manage Admin Profile</string>
+    
+    <!-- Buttons -->
+    <string name="refreshList">Refresh list</string>
+    <string name="updateList">Update list</string>
+    <string name="removeList">Remove item</string>
+    <string name="addNewItem">Add new item</string>
+    <string name="addItem">Add item</string>
+    <string name="updateDetails">Update details</string>
+    <string name="removeAccount">Remove account</string>
+    <string name="updateOrder">Update order</string>
+    <string name="cancelOrder">Cancel order</string>
+    <string name="removeItemFromOrder">Remove item from order</string>
+
+    <!-- Manage Sale Items -->
+    <string name="totalProducts">Total products: 0</string>
+    <string name="productID">Product ID: </string>
+    <string name="productName">Product Name:</string>
+    <string name="productDescription">Product Description:</string>
+    <string name="productPrice">Product Price:</string>
+    <string name="productImage">Product Image:</string>
+    <string name="productIsAvailable">Is Available?</string>
+    
 
 </resources>
