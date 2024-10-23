@@ -82,7 +82,7 @@
     <string name="managePaymentData">Manage Payment Data</string>
     <string name="manageReviews">Manage Reviews</string>
     <string name="manageAdminProfile">Manage Admin Profile</string>
-    
+
     <!-- Buttons -->
     <string name="refreshList">Refresh list</string>
     <string name="updateList">Update list</string>
@@ -104,6 +104,11 @@
     <string name="productImage">Product Image:</string>
     <string name="productIsAvailable">Is Available?</string>
     <string name="zero">0</string>
-    
+
+    <!-- Add new sale item -->
+    <string name="addNewSaleItem">Add New Sale Item</string>
+
+    <!-- Manage Registered Accounts -->
+    <string name="totalAccounts">Total accounts: 0</string>
 
 </resources>
