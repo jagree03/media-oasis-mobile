@@ -86,7 +86,7 @@
     <!-- Buttons -->
     <string name="refreshList">Refresh list</string>
     <string name="updateList">Update list</string>
-    <string name="removeList">Remove item</string>
+    <string name="removeItem">Remove item</string>
     <string name="addNewItem">Add new item</string>
     <string name="addItem">Add item</string>
     <string name="updateDetails">Update details</string>
@@ -103,6 +103,7 @@
     <string name="productPrice">Product Price:</string>
     <string name="productImage">Product Image:</string>
     <string name="productIsAvailable">Is Available?</string>
+    <string name="zero">0</string>
     
 
 </resources>

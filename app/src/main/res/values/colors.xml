@@ -8,4 +8,5 @@
     <color name="editTextBackground">#201F29</color>
     <color name="editTextHintColour">#43FFFFFF</color>
     <color name="ratingBarGold">#EDC71C</color>
+    <color name="adminEditTextColour">#08FDF5</color>
 </resources>

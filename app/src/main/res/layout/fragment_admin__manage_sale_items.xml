@@ -40,40 +40,58 @@
         android:id="@+id/textViewMenuHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="15dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/manageSaleItems"
         android:textAlignment="center"
         android:textColor="#F8F5F5"
         android:textSize="28sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="34dp" />
+        app:layout_constraintBottom_toTopOf="@+id/listViewSaleItems"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listViewSaleItems"
         android:layout_width="360dp"
-        android:layout_height="260dp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="81dp" />
+        android:layout_height="210dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTotalProductsQuantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewTotalProductsQuantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="22dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/totalProducts"
         android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="354dp" />
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutProductInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayoutProductInfo"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="19dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="377dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutButtonBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -87,14 +105,17 @@
                 android:fontFamily="@font/frutiger_fontfamily"
                 android:text="@string/productID"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextProductId"
                 android:layout_width="86dp"
-                android:layout_height="47dp"
+                android:layout_height="48dp"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                android:text="@string/zero"
+                android:textColor="#08FDF5" />
         </LinearLayout>
 
         <LinearLayout
@@ -109,14 +130,17 @@
                 android:fontFamily="@font/frutiger_fontfamily"
                 android:text="@string/productName"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextProductName"
                 android:layout_width="86dp"
                 android:layout_height="47dp"
                 android:ems="10"
-                android:inputType="text" />
+                android:inputType="text"
+                android:text="@string/itemTitle"
+                android:textColor="@color/adminEditTextColour"/>
         </LinearLayout>
 
         <LinearLayout
@@ -133,14 +157,17 @@
                 android:fontFamily="@font/frutiger_fontfamily"
                 android:text="@string/productDescription"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextProductDescription"
-                android:layout_width="190dp"
+                android:layout_width="wrap_content"
                 android:layout_height="47dp"
                 android:ems="10"
-                android:inputType="text" />
+                android:inputType="text"
+                android:text="@string/productDescription"
+                android:textColor="@color/adminEditTextColour"/>
         </LinearLayout>
 
         <LinearLayout
@@ -155,14 +182,17 @@
                 android:fontFamily="@font/frutiger_fontfamily"
                 android:text="@string/productPrice"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextProductPrice"
                 android:layout_width="86dp"
                 android:layout_height="47dp"
                 android:ems="10"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:text="@string/itemPrice"
+                android:textColor="@color/adminEditTextColour"/>
         </LinearLayout>
 
         <LinearLayout
@@ -177,7 +207,8 @@
                 android:fontFamily="@font/frutiger_fontfamily"
                 android:text="@string/productImage"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextProductImage"
@@ -199,14 +230,82 @@
                 android:fontFamily="@font/frutiger_fontfamily"
                 android:text="@string/productIsAvailable"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <CheckBox
                 android:id="@+id/checkBoxIsAvailable"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="47dp"
+                />
 
         </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButtonBox"
+        android:layout_width="369dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="31dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_refreshList"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/frutiger_fontfamily"
+            android:text="@string/refreshList"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_updateList"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/frutiger_fontfamily"
+            android:text="@string/updateList"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_removeItem"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/frutiger_fontfamily"
+            android:text="@string/removeItem"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button_addNewItem"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/frutiger_fontfamily"
+            android:text="@string/addNewItem"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
 
     </LinearLayout>
 
