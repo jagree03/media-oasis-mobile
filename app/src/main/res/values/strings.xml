@@ -39,8 +39,12 @@
     <string name="open">Opening navigation drawer</string>
     <string name="close">Closing navigation drawer</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Placeholder -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="zero">0</string>
+    <string name="placeholder">placeholder</string>
+
+
 
     <string name="shoppingcart">Shopping Cart</string>
     <string name="shoppingcartContentDescription">Shopping Cart Screen</string>
@@ -103,12 +107,18 @@
     <string name="productPrice">Product Price:</string>
     <string name="productImage">Product Image:</string>
     <string name="productIsAvailable">Is Available?</string>
-    <string name="zero">0</string>
 
     <!-- Add new sale item -->
     <string name="addNewSaleItem">Add New Sale Item</string>
 
     <!-- Manage Registered Accounts -->
     <string name="totalAccounts">Total accounts: 0</string>
+    <string name="accountType">Account Type:</string>
+    <string name="accountID">Account ID:</string>
+    <string name="accountFirstName">Account First Name:</string>
+    <string name="accountLastName">Account Last Name:</string>
+    <string name="accountEmailAddress">Account E-mail:</string>
+    <string name="accountUsername">Account Username:</string>
+    <string name="accountPassword">Account Password:</string>
 
 </resources>
