@@ -130,4 +130,22 @@
     <string name="orderTime">Order Time:</string>
     <string name="orderStatus">Order Status:</string>
 
+    <!-- Update An Order (Customer Order) -->
+    <string name="updateAnOrder">Update an order</string>
+    <string name="orderDetailsID">OrderDetails ID:</string>
+
+    <!-- Manage Payment Data -->
+    <string name="totalDataRecords">Total data records: 0</string>
+    <string name="paymentID">Payment ID:</string>
+    <string name="paymentType">Payment Type:</string>
+    <string name="paymentDate">Payment Date:</string>
+    <string name="paymentAmount">Amount:</string>
+    <string name="totalPaidToMediaOasis">Total paid to Media Oasis: £0.00</string>
+
+    <!-- Manage Reviews -->
+    <string name="totalReviews">Total reviews: 0</string>
+    <string name="reviewID">Review ID:</string>
+    <string name="comment">Comment:</string>
+    <string name="starRating">Star Rating:</string>
+
 </resources>
