@@ -133,6 +133,8 @@
     <!-- Update An Order (Customer Order) -->
     <string name="updateAnOrder">Update an order</string>
     <string name="orderDetailsID">OrderDetails ID:</string>
+    <string name="productQuantity">Product Quantity:</string>
+    <string name="productCost">Product Cost:</string>
 
     <!-- Manage Payment Data -->
     <string name="totalDataRecords">Total data records: 0</string>
