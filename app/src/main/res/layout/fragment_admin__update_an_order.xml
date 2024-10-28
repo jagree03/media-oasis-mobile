@@ -53,4 +53,141 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/linearLayoutOrderInfo"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="85dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewOrderID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/frutiger_fontfamily"
+                android:text="@string/orderID"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextOrderID"
+                android:layout_width="86dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/zero"
+                android:textColor="#08FDF5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewCustomerID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/frutiger_fontfamily"
+                android:text="@string/customerID"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextCustomerID"
+                android:layout_width="86dp"
+                android:layout_height="47dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/zero"
+                android:textColor="@color/adminEditTextColour" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="494dp">
+
+            <TextView
+                android:id="@+id/textViewCustomerFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/frutiger_fontfamily"
+                android:text="@string/customerFirstName"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextCustomerFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@string/placeholder"
+                android:textColor="@color/adminEditTextColour" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewCustomerLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/frutiger_fontfamily"
+                android:text="@string/customerLastName"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextCustomerLastName"
+                android:layout_width="86dp"
+                android:layout_height="47dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@string/placeholder"
+                android:textColor="@color/adminEditTextColour" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/frutiger_fontfamily"
+                android:text="@string/orderStatus"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextOrderStatus"
+                android:layout_width="120dp"
+                android:layout_height="47dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@string/placeholder"
+                android:textColor="@color/adminEditTextColour" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
