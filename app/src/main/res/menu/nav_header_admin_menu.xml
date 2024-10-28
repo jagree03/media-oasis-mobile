@@ -14,8 +14,8 @@
         android:title="@string/manageRegisteredAccounts"/>
 
     <item
-        android:id="@+id/managePaymentData"
-        android:title="@string/managePaymentData"/>
+        android:id="@+id/managePaymentRecords"
+        android:title="@string/managePaymentRecords"/>
 
     <item
         android:id="@+id/manageReviews"

@@ -82,7 +82,7 @@
     <string name="manageSaleItems">Manage Sale Items</string>
     <string name="manageCustomerOrders">Manage Customer Orders</string>
     <string name="manageRegisteredAccounts">Manage Registered Accounts</string>
-    <string name="managePaymentData">Manage Payment Data</string>
+    <string name="managePaymentRecords">Manage Payment Records</string>
     <string name="manageReviews">Manage Reviews</string>
     <string name="manageAdminProfile">Manage Admin Profile</string>
 
@@ -136,7 +136,7 @@
     <string name="productQuantity">Product Quantity:</string>
     <string name="productCost">Product Cost:</string>
 
-    <!-- Manage Payment Data -->
+    <!-- Manage Payment Records -->
     <string name="totalDataRecords">Total data records: 0</string>
     <string name="paymentID">Payment ID:</string>
     <string name="paymentType">Payment Type:</string>
