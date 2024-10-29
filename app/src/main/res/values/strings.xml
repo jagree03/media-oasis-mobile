@@ -149,5 +149,6 @@
     <string name="reviewID">Review ID:</string>
     <string name="comment">Comment:</string>
     <string name="starRating">Star Rating:</string>
+    <string name="isApproved">Is Approved?:</string>
 
 </resources>

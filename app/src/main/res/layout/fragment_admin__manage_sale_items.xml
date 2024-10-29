@@ -136,7 +136,7 @@
             <EditText
                 android:id="@+id/editTextProductName"
                 android:layout_width="86dp"
-                android:layout_height="47dp"
+                android:layout_height="48dp"
                 android:ems="10"
                 android:inputType="text"
                 android:text="@string/itemTitle"
@@ -163,7 +163,7 @@
             <EditText
                 android:id="@+id/editTextProductDescription"
                 android:layout_width="wrap_content"
-                android:layout_height="47dp"
+                android:layout_height="48dp"
                 android:ems="10"
                 android:inputType="text"
                 android:text="@string/productDescription"
@@ -188,7 +188,7 @@
             <EditText
                 android:id="@+id/editTextProductPrice"
                 android:layout_width="86dp"
-                android:layout_height="47dp"
+                android:layout_height="48dp"
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:text="@string/itemPrice"
@@ -213,7 +213,7 @@
             <EditText
                 android:id="@+id/editTextProductImage"
                 android:layout_width="86dp"
-                android:layout_height="47dp"
+                android:layout_height="48dp"
                 android:ems="10"
                 android:inputType="text" />
         </LinearLayout>
@@ -235,8 +235,8 @@
 
             <CheckBox
                 android:id="@+id/checkBoxIsAvailable"
-                android:layout_width="wrap_content"
-                android:layout_height="47dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 />
 
         </LinearLayout>
