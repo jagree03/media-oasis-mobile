@@ -14,7 +14,7 @@ private val ver : Int = 1
 class DataBaseHelper(context: Context) : SQLiteOpenHelper(context,DataBaseName,null, ver) {
 
     /* User Table */
-    private val TableName = "User"
+    private val TableName = "TUser"
 
     private val Column_ID = "userID"
     private val Column_FirstName = "userFirstName"
