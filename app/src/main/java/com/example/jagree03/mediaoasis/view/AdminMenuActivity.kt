@@ -63,7 +63,7 @@ class AdminMenuActivity : AppCompatActivity() {
 
                 }
 
-                R.id.managePaymentData -> {
+                R.id.managePaymentRecords -> {
 
                 }
 

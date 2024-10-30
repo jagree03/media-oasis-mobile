@@ -20,4 +20,4 @@ Such improvements include
 - Android Studio + Android Virtual Device Emulation
 - Google Images
 - **Figma** to help design the user interface.
-- SQLite Database
+- SQLite Database + DB Browser for SQLite 3.12.2
