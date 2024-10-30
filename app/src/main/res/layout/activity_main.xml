@@ -145,6 +145,7 @@
             android:layout_weight="1"
             android:background="@drawable/rounded_corner"
             android:fontFamily="@font/frutiger_fontfamily"
+            android:onClick="login"
             android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
