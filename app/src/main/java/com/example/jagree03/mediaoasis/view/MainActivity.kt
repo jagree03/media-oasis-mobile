@@ -3,6 +3,8 @@ package com.example.jagree03.mediaoasis
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -15,7 +17,6 @@ import com.example.jagree03.mediaoasis.model.User
 class MainActivity : AppCompatActivity() {
 
     var loginAttempts: Int = 3
-    var loginDisabled: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,17 +38,14 @@ class MainActivity : AppCompatActivity() {
         val userPasswordEditText: EditText = findViewById(R.id.editTextPasswordInput)
         val userPassword: String = userPasswordEditText.text.toString()
 
+        Log.d("myTag", "Login Attempts: ${loginAttempts}")
+
         if (loginAttempts == 0) {
-            displayMessageAlert("Login disabled")
-            loginDisabled = true
+            displayMessageAlert("Login disabled, you ran out of attempts! Please try again in 10 seconds.")
+            disableLoginInput(true)
         }
         else
             loginAttempts -= 1 // subtract 1 from login attempts (default is 3)
-
-        while (loginDisabled == true) {
-            userNameEditText.isVisible = false
-            userPasswordEditText.isVisible = false
-        }
 
         if (userName.isEmpty() || userPassword.isEmpty()) // if empty (null), display a notification to the user
             Toast.makeText(this,"Please enter your username and password to sign in.",Toast.LENGTH_LONG).show()
@@ -99,5 +97,27 @@ class MainActivity : AppCompatActivity() {
         builder.setMessage(message)
         builder.create()
         builder.show()
+    }
+
+    fun disableLoginInput(value: Boolean) {
+        val userNameEditText: EditText = findViewById(R.id.editTextUsernameInput)
+        val userPasswordEditText: EditText = findViewById(R.id.editTextPasswordInput)
+
+        if (value) {
+            userNameEditText.isVisible = false
+            userPasswordEditText.isVisible = false
+
+            object: CountDownTimer(10000, 200){
+                override fun onTick(p0: Long) {}
+                override fun onFinish() {
+                    disableLoginInput(false)
+                    loginAttempts += 1
+                    Log.d("myTag", "Login Attempts: ${loginAttempts}")
+                }
+            }.start()
+        } else {
+            userNameEditText.isVisible = true
+            userPasswordEditText.isVisible = true
+        }
     }
 }
