@@ -40,12 +40,19 @@ class MenuActivity : AppCompatActivity() {
 
         ///////////// Navigation Drawer + Toggle
 
+        val buyMenuFragment = BuyMenuFragment()
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
 
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState() // telling toggle it's ready to be activated
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true) // able to open the toggle, when its open, that toggle menu can respond to a back arrow action of the android system wide on-screen navigation buttons
+
+        supportFragmentManager.beginTransaction().apply { // begin fragment transaction operation
+            replace(R.id.frameLayout, buyMenuFragment) // replacing the fragment in the frameLayout container of the activity with the buy menu fragment
+            addToBackStack(null) // allows you to go back with android back arrow navigation key
+            commit() // applying the replacement operation and commiting the transaction
+        }
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId) { // it refers to the current menu item that was clicked on, we want to respond to the id of that item, the id's provided in the menu resource file.
