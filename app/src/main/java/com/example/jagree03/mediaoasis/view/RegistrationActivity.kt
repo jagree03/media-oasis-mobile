@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.set
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.jagree03.mediaoasis.model.User
+import com.example.jagree03.mediaoasis.model.DataBaseHelper
 
 class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,5 +82,38 @@ class RegistrationActivity : AppCompatActivity() {
         var error: String = ""
 
         return error
+    }
+
+    fun registerNewUser(view: View) {
+
+        val firstName: String = findViewById<EditText>(R.id.editTextFirstNameInput).text.toString()
+        val lastName: String = findViewById<EditText>(R.id.editTextLastNameInput).text.toString()
+        val email: String = findViewById<EditText>(R.id.editTextEmailInput).text.toString()
+        val phoneNo: String = findViewById<EditText>(R.id.editTextPhoneNumInput).text.toString()
+        val userName: String = findViewById<EditText>(R.id.editTextUsernameInput).text.toString()
+        val userPassword: String = findViewById<EditText>(R.id.editTextPasswordInput).text.toString()
+        val message: String
+
+        if(firstName.isEmpty() || lastName.isEmpty() )
+            message = "Please input your first name and last name."
+        else if(userName.isEmpty() || userPassword.isEmpty() )
+            message = "Please input your username and password."
+        else { // Process of saving/inserting the data to the database.
+
+            // User object creation process using the User data class in the model
+            val newUser = User(-1,firstName, lastName, email, phoneNo, userName, userPassword, 0)
+            val myDatabase = DataBaseHelper(this)
+            val result = myDatabase.addUser(newUser)
+
+            when(result) {
+                -1 -> message = "An error occurred when creating the user account."
+                -2 -> message = "Error: cannot open or create the database"
+                -3 -> message = "A user account with this username already exists."
+                else ->  {
+                    message = "Your account has been registered, thank you."
+                }
+            }
+            Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
+        }
     }
 }
