@@ -31,7 +31,7 @@ class ProfileSettingsActivity : AppCompatActivity() {
      */
     fun showHidePassword(view: View) {
         val editTextPassword: EditText = findViewById(R.id.editTextPasswordInput)
-        val showHidePasswordButton: Button = findViewById(R.id.button_showhidepassword)
+        val showHidePasswordButton: Button = findViewById(R.id.button_ShowHidePassword)
 
         if (showHidePasswordButton.text.equals(getString(R.string.show))) {
             editTextPassword.transformationMethod = HideReturnsTransformationMethod.getInstance()

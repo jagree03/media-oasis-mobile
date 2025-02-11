@@ -1,6 +1,5 @@
 package com.example.jagree03.mediaoasis
 
-import android.content.Intent
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
@@ -10,7 +9,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.text.set
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.jagree03.mediaoasis.model.User
@@ -36,7 +34,7 @@ class RegistrationActivity : AppCompatActivity() {
      */
     fun showHidePassword(view: View) {
         val editTextPassword: EditText = findViewById(R.id.editTextPasswordInput)
-        val showHidePasswordButton: Button = findViewById(R.id.button_showhidepassword)
+        val showHidePasswordButton: Button = findViewById(R.id.button_ShowHidePassword)
 
         if (showHidePasswordButton.text.equals(getString(R.string.show))) {
             editTextPassword.transformationMethod = HideReturnsTransformationMethod.getInstance()

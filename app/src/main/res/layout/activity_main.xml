@@ -76,7 +76,7 @@
         app:layout_constraintStart_toStartOf="@+id/editTextUsernameInput" />
 
     <Button
-        android:id="@+id/button_register"
+        android:id="@+id/button_Register"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="174dp"
         android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/button_register"
+        app:layout_constraintEnd_toStartOf="@+id/button_Register"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/editTextPasswordInput" />
 
@@ -169,7 +169,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_register" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Register" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

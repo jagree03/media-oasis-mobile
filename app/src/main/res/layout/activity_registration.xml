@@ -73,7 +73,7 @@
         app:srcCompat="@drawable/media_oasis_logo" />
 
     <TextView
-        android:id="@+id/textViewFirstname"
+        android:id="@+id/textViewFirstName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -82,7 +82,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewLastname"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLastName"
         app:layout_constraintEnd_toStartOf="@+id/editTextFirstNameInput"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/textViewRegistrationHeader" />
@@ -101,12 +101,12 @@
         android:text=""
         android:textColor="@color/grey"
         android:textColorHint="@color/editTextHintColour"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textViewFirstname"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewFirstName"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toEndOf="@+id/textViewFirstname" />
+        app:layout_constraintStart_toEndOf="@+id/textViewFirstName" />
 
     <TextView
-        android:id="@+id/textViewLastname"
+        android:id="@+id/textViewLastName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -118,7 +118,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textViewEmail"
         app:layout_constraintEnd_toStartOf="@+id/editTextLastNameInput"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFirstname" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirstName" />
 
     <EditText
         android:id="@+id/editTextLastNameInput"
@@ -134,9 +134,9 @@
         android:text=""
         android:textColor="@color/grey"
         android:textColorHint="@color/editTextHintColour"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textViewLastname"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewLastName"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toEndOf="@+id/textViewLastname" />
+        app:layout_constraintStart_toEndOf="@+id/textViewLastName" />
 
     <TextView
         android:id="@+id/textViewEmail"
@@ -151,7 +151,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textViewPhoneNum"
         app:layout_constraintEnd_toStartOf="@+id/editTextEmailInput"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLastname" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewLastName" />
 
     <EditText
         android:id="@+id/editTextEmailInput"
@@ -248,7 +248,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_showhidepassword"
+        app:layout_constraintBottom_toTopOf="@+id/button_ShowHidePassword"
         app:layout_constraintEnd_toStartOf="@+id/editTextPasswordInput"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/textViewUsername" />
@@ -272,7 +272,7 @@
         app:layout_constraintStart_toEndOf="@+id/textViewPassword" />
 
     <Button
-        android:id="@+id/button_showhidepassword"
+        android:id="@+id/button_ShowHidePassword"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="140dp"
         android:layout_height="48dp"
@@ -286,12 +286,12 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/button_register"
+        app:layout_constraintEnd_toStartOf="@+id/button_Register"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button_register"
+        android:id="@+id/button_Register"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="140dp"
         android:layout_height="48dp"
@@ -307,7 +307,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_showhidepassword" />
+        app:layout_constraintStart_toEndOf="@+id/button_ShowHidePassword" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
