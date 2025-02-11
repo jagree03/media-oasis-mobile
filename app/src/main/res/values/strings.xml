@@ -19,7 +19,7 @@
     <string name="email">Email address:</string>
     <string name="emailHint">Enter email</string>
     <string name="phoneNo">Phone no:</string>
-    <string name="phoneNoHint">Enter phone number</string>
+    <string name="phoneNoHint">Enter phone no</string>
     <string name="show">Show Password</string>
     <string name="hide">Hide Password</string>
     <string name="menu">Menu</string>
