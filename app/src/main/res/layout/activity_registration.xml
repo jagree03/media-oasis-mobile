@@ -10,42 +10,37 @@
 
     <ImageView
         android:id="@+id/imageViewMediaOasisLogo"
-        android:layout_width="353dp"
-        android:layout_height="109dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/mediaOasisLogoContentDescription"
-        app:layout_constraintBottom_toTopOf="@+id/textViewRegistrationHeader"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/guideline67"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
         app:srcCompat="@drawable/media_oasis_logo" />
 
     <TextView
         android:id="@+id/textViewRegistrationHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="55dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/registrationHeader"
         android:textColor="#F8F5F5"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout_RegistrationForm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewMediaOasisLogo" />
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="176dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout_RegistrationForm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="51dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button_showhidepassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRegistrationHeader">
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="247dp">
 
         <LinearLayout
             android:id="@+id/linearLayout_FirstNameBox"
@@ -255,16 +250,13 @@
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
+        android:onClick="showHidePassword"
         android:text="@string/show"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        android:onClick="showHidePassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_register"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_RegistrationForm" />
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="650dp" />
 
     <Button
         android:id="@+id/button_register"
@@ -279,11 +271,8 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_showhidepassword"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_RegistrationForm" />
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="650dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -297,7 +286,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="32dp" />
+        app:layout_constraintGuide_percent="0.02" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
@@ -312,6 +301,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
