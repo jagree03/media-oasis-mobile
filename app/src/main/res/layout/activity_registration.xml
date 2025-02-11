@@ -9,6 +9,55 @@
     tools:context=".RegistrationActivity">
 
     <ImageView
+        android:id="@+id/imageViewMediaOasisLogo2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/mediaOasisLogoContentDescription"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/guideline67"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:srcCompat="@drawable/media_oasis_logo" />
+
+    <TextView
+        android:id="@+id/textViewRegistrationHeader2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/registrationHeader"
+        android:textColor="#F8F5F5"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextFirstNameInput"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline67" />
+
+    <TextView
+        android:id="@+id/textViewRegistrationHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/registrationHeader"
+        android:textColor="#F8F5F5"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextFirstNameInput"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline67" />
+
+    <ImageView
         android:id="@+id/imageViewMediaOasisLogo"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -24,229 +73,210 @@
         app:srcCompat="@drawable/media_oasis_logo" />
 
     <TextView
-        android:id="@+id/textViewRegistrationHeader"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewFirstname"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:fontFamily="@font/frutiger_fontfamily"
-        android:text="@string/registrationHeader"
-        android:textColor="#F8F5F5"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="176dp" />
+        android:text="@string/firstName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLastname"
+        app:layout_constraintEnd_toStartOf="@+id/editTextFirstNameInput"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegistrationHeader" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout_RegistrationForm"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextFirstNameInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:autofillHints="name"
+        android:background="@color/editTextBackground"
+        android:ems="10"
+        android:hint="@string/firstNameHint"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/grey"
+        android:textColorHint="@color/editTextHintColour"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewFirstname"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toEndOf="@+id/textViewFirstname" />
+
+    <TextView
+        android:id="@+id/textViewLastname"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="247dp">
+        android:layout_weight="1"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/lastName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEmail"
+        app:layout_constraintEnd_toStartOf="@+id/editTextLastNameInput"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirstname" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout_FirstNameBox"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
+    <EditText
+        android:id="@+id/editTextLastNameInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:autofillHints="name"
+        android:background="@color/editTextBackground"
+        android:ems="10"
+        android:hint="@string/lastNameHint"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/grey"
+        android:textColorHint="@color/editTextHintColour"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewLastname"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toEndOf="@+id/textViewLastname" />
 
-            <TextView
-                android:id="@+id/textViewFirstname"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/firstName"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/email"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPhoneNum"
+        app:layout_constraintEnd_toStartOf="@+id/editTextEmailInput"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLastname" />
 
-            <EditText
-                android:id="@+id/editTextFirstNameInput"
-                android:layout_width="180dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:autofillHints="name"
-                android:background="@color/editTextBackground"
-                android:ems="10"
-                android:hint="@string/firstNameHint"
-                android:inputType="text"
-                android:text=""
-                android:textColor="@color/grey"
-                android:textColorHint="@color/editTextHintColour" />
-        </LinearLayout>
+    <EditText
+        android:id="@+id/editTextEmailInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:autofillHints="emailAddress"
+        android:background="@color/editTextBackground"
+        android:ems="10"
+        android:hint="@string/emailHint"
+        android:inputType="textEmailAddress"
+        android:text=""
+        android:textColor="@color/grey"
+        android:textColorHint="@color/editTextHintColour"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewEmail"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toEndOf="@+id/textViewEmail" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout_LastNameBox"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/textViewPhoneNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/phoneNo"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewUsername"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPhoneNumInput"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
 
-            <TextView
-                android:id="@+id/textViewLastname"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/lastName"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
+    <EditText
+        android:id="@+id/editTextPhoneNumInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:autofillHints="phone"
+        android:background="@color/editTextBackground"
+        android:ems="10"
+        android:hint="@string/phoneNoHint"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:text=""
+        android:textColor="@color/grey"
+        android:textColorHint="@color/editTextHintColour"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewPhoneNum"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toEndOf="@+id/textViewPhoneNum" />
 
-            <EditText
-                android:id="@+id/editTextLastNameInput"
-                android:layout_width="180dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:autofillHints="name"
-                android:background="@color/editTextBackground"
-                android:ems="10"
-                android:hint="@string/lastNameHint"
-                android:inputType="text"
-                android:text=""
-                android:textColor="@color/grey"
-                android:textColorHint="@color/editTextHintColour" />
-        </LinearLayout>
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/username"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPassword"
+        app:layout_constraintEnd_toStartOf="@+id/editTextUsernameInput"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhoneNum" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout_EmailBox"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
+    <EditText
+        android:id="@+id/editTextUsernameInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:autofillHints="username"
+        android:background="@color/editTextBackground"
+        android:ems="10"
+        android:hint="@string/usernameHint"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/grey"
+        android:textColorHint="@color/editTextHintColour"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewUsername"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toEndOf="@+id/textViewUsername" />
 
-            <TextView
-                android:id="@+id/textViewEmail"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/email"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/password"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_showhidepassword"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPasswordInput"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUsername" />
 
-            <EditText
-                android:id="@+id/editTextEmailInput"
-                android:layout_width="180dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:autofillHints="emailAddress"
-                android:background="@color/editTextBackground"
-                android:ems="10"
-                android:hint="@string/emailHint"
-                android:inputType="textEmailAddress"
-                android:text=""
-                android:textColor="@color/grey"
-                android:textColorHint="@color/editTextHintColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout_PhoneNoBox"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewPhoneNum"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/phoneNo"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <EditText
-                android:id="@+id/editTextPhoneNumInput"
-                android:layout_width="180dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:autofillHints="phone"
-                android:background="@color/editTextBackground"
-                android:ems="10"
-                android:hint="@string/phoneNoHint"
-                android:inputType="phone"
-                android:maxLength="11"
-                android:text=""
-                android:textColor="@color/grey"
-                android:textColorHint="@color/editTextHintColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout_UsernameBox"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewUsername"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/username"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <EditText
-                android:id="@+id/editTextUsernameInput"
-                android:layout_width="180dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:autofillHints="username"
-                android:background="@color/editTextBackground"
-                android:ems="10"
-                android:hint="@string/usernameHint"
-                android:inputType="text"
-                android:text=""
-                android:textColor="@color/grey"
-                android:textColorHint="@color/editTextHintColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout_PasswordBox"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewPassword"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/password"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <EditText
-                android:id="@+id/editTextPasswordInput"
-                android:layout_width="180dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:autofillHints="name"
-                android:background="@color/editTextBackground"
-                android:ems="10"
-                android:hint="@string/passwordHint"
-                android:inputType="textPassword"
-                android:text=""
-                android:textColor="@color/grey"
-                android:textColorHint="@color/editTextHintColour" />
-        </LinearLayout>
-
-    </LinearLayout>
+    <EditText
+        android:id="@+id/editTextPasswordInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:autofillHints="name"
+        android:background="@color/editTextBackground"
+        android:ems="10"
+        android:hint="@string/passwordHint"
+        android:inputType="textPassword"
+        android:text=""
+        android:textColor="@color/grey"
+        android:textColorHint="@color/editTextHintColour"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewPassword"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toEndOf="@+id/textViewPassword" />
 
     <Button
         android:id="@+id/button_showhidepassword"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="140dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
@@ -255,14 +285,17 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="650dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/button_register"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_register"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="140dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
@@ -271,8 +304,10 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="650dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_showhidepassword" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
