@@ -6,6 +6,10 @@
         android:title="@string/catalog"/>
 
     <item
+        android:id="@+id/shoppingCart"
+        android:title="@string/shoppingcart"/>
+
+    <item
         android:id="@+id/myOrders"
         android:title="@string/myOrders"/>
 

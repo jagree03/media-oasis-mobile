@@ -69,6 +69,19 @@ class MenuActivity : AppCompatActivity() {
                     }
                 }
 
+                R.id.shoppingCart -> {
+
+                    Toast.makeText(applicationContext, "Entering shopping cart...", Toast.LENGTH_SHORT).show()
+
+                    val shoppingCartFragment = ShoppingCartFragment()
+
+                    supportFragmentManager.beginTransaction().apply { // begin fragment transaction operation
+                        replace(R.id.frameLayout, shoppingCartFragment) // replacing the fragment in the frameLayout container of the activity with the shopping cart fragment
+                        addToBackStack(null) // allows you to go back with android back arrow navigation key
+                        commit() // applying the replacement operation and commiting the transaction
+                    }
+                }
+
                 R.id.myOrders -> {
 
                     Toast.makeText(applicationContext, "Entering my orders page...", Toast.LENGTH_SHORT).show()

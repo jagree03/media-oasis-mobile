@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
      * Debug method to test the appearance of activity layouts
      */
     fun debugGoToAnyActivity() {
-        val send = Intent(this, ProfileSettingsActivity::class.java)
+        val send = Intent(this, MenuActivity::class.java)
 
         startActivity(send)
     }
