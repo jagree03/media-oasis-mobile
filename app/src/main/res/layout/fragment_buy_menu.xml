@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="57dp" />
+        app:layout_constraintGuide_percent="0.13816689" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline16"
@@ -40,8 +40,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/menu"
         android:textAlignment="center"
@@ -59,7 +59,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="90dp"
         android:layout_marginEnd="90dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/border_white"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -73,9 +73,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:contentDescription="@string/itemImageContentDescription"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/guideline69"
