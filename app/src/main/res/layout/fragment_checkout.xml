@@ -12,14 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="32dp" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="16dp" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline18"
@@ -39,210 +39,61 @@
         android:id="@+id/textViewMenuHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="117dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/payment"
         android:textAlignment="center"
         android:textColor="#F8F5F5"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <ImageButton
         android:id="@+id/imageButtonCard"
-        android:layout_width="153dp"
-        android:layout_height="156dp"
-        android:layout_marginTop="35dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="16dp"
         android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
+        android:contentDescription="@string/cardContentDescription"
+        android:scaleType="fitXY"
         android:scaleX="1.2"
         android:scaleY="1.2"
         android:src="@drawable/credit_debit_card"
-        android:contentDescription="@string/cardContentDescription"
+        app:layout_constraintBottom_toTopOf="@+id/guideline71"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonPayPal"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMenuHeader" />
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toTopOf="@+id/guideline72" />
 
     <ImageButton
         android:id="@+id/imageButtonPayPal"
-        android:layout_width="153dp"
-        android:layout_height="156dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
         android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
+        android:contentDescription="@string/paypalContentDescription"
+        android:scaleType="fitXY"
         android:scaleX="0.8"
         android:scaleY="0.8"
         android:src="@drawable/paypal"
-        android:contentDescription="@string/paypalContentDescription"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout_PaymentForm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/guideline71"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toEndOf="@+id/imageButtonCard"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMenuHeader" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout_PaymentForm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="14dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/switch_SavePaymentDetails"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonCard">
-
-
-        <LinearLayout
-            android:id="@+id/linearLayout_CardholderNameBox"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewCardholderName"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/cardholder_name"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <EditText
-                android:id="@+id/editTextCardholderNameInput"
-                android:layout_width="180dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:autofillHints="name"
-                android:background="@color/editTextBackground"
-                android:ems="10"
-                android:hint="@string/cardholder_name_hint"
-                android:inputType="text"
-                android:text=""
-                android:textColor="@color/grey"
-                android:textColorHint="@color/editTextHintColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout_CardNumberBox"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewCardNumber"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/card_number"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <EditText
-                android:id="@+id/editTextCardNumberInput"
-                android:layout_width="180dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:autofillHints="name"
-                android:background="@color/editTextBackground"
-                android:ems="10"
-                android:hint="@string/card_number_hint"
-                android:inputType="number"
-                android:maxLength="16"
-                android:textColor="@color/grey"
-                android:textColorHint="@color/editTextHintColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout_CardExpirationDateBox"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewCardExpiration"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/card_expiration_date"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/editTextCardExpirationInput"
-                android:layout_width="180dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:autofillHints="emailAddress"
-                android:background="@color/editTextBackground"
-                android:ems="10"
-                android:hint="@string/card_expiration_date_hint"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/grey"
-                android:textColorHint="@color/editTextHintColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout_CardCVVBox"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewCardCVV"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/card_security_code"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <EditText
-                android:id="@+id/editTextCardCVVInput"
-                android:layout_width="180dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:autofillHints="phone"
-                android:background="@color/editTextBackground"
-                android:ems="10"
-                android:hint="@string/card_security_code_hint"
-                android:inputType="number"
-                android:maxLength="3"
-                android:text=""
-                android:textColor="@color/grey"
-                android:textColorHint="@color/editTextHintColour" />
-        </LinearLayout>
-
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="@+id/guideline72" />
 
     <Switch
         android:id="@+id/switch_SavePaymentDetails"
-        android:layout_width="205dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="140dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:showText="false"
         android:text="@string/save_payment_details"
@@ -251,35 +102,28 @@
         android:textDirection="locale"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textViewOrderTotal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        tools:layout_editor_absoluteY="532dp" />
 
     <TextView
         android:id="@+id/textViewOrderTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="87dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="22dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/ordertotal"
         android:textAlignment="center"
         android:textColor="#F8F5F5"
-        android:textSize="28sp"
+        android:textSize="19sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button_pay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="580dp" />
 
     <Button
         android:id="@+id/button_pay"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="140dp"
         android:layout_height="48dp"
-        android:layout_marginStart="135dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="27dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
@@ -287,9 +131,147 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="614dp" />
+
+    <EditText
+        android:id="@+id/editTextCardholderNameInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:autofillHints="name"
+        android:background="@color/editTextBackground"
+        android:ems="10"
+        android:hint="@string/cardholder_name_hint"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/grey"
+        android:textColorHint="@color/editTextHintColour"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewCardholderName"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18" />
+
+    <TextView
+        android:id="@+id/textViewCardholderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/cardholder_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toTopOf="@+id/guideline71" />
+
+    <TextView
+        android:id="@+id/textViewCardNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/card_number"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        tools:layout_editor_absoluteY="386dp" />
+
+    <EditText
+        android:id="@+id/editTextCardNumberInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:autofillHints="name"
+        android:background="@color/editTextBackground"
+        android:ems="10"
+        android:hint="@string/card_number_hint"
+        android:inputType="number"
+        android:maxLength="16"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/editTextHintColour"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewCardNumber"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18" />
+
+    <EditText
+        android:id="@+id/editTextCardExpirationInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:autofillHints="emailAddress"
+        android:background="@color/editTextBackground"
+        android:ems="10"
+        android:hint="@string/card_expiration_date_hint"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/editTextHintColour"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewCardCVV"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18" />
+
+    <TextView
+        android:id="@+id/textViewCardExpiration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/card_expiration_date"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        tools:layout_editor_absoluteY="433dp" />
+
+    <EditText
+        android:id="@+id/editTextCardCVVInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:autofillHints="phone"
+        android:background="@color/editTextBackground"
+        android:ems="10"
+        android:hint="@string/card_security_code_hint"
+        android:inputType="number"
+        android:maxLength="3"
+        android:text=""
+        android:textColor="@color/grey"
+        android:textColorHint="@color/editTextHintColour"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewCardExpiration"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18" />
+
+    <TextView
+        android:id="@+id/textViewCardCVV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/card_security_code"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        tools:layout_editor_absoluteY="484dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
