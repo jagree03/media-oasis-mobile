@@ -70,11 +70,11 @@
 
     <TextView
         android:id="@+id/textViewReceiveNotifications"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/orderConfirmed_ReceiveNotifications"
@@ -88,10 +88,10 @@
 
     <TextView
         android:id="@+id/textViewCheckStatus"
-        android:layout_width="327dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/orderConfirmed_CheckStatus"
@@ -105,10 +105,10 @@
     <Button
         android:id="@+id/button_goHome"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="140dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         android:layout_marginBottom="16dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
