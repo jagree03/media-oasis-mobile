@@ -126,14 +126,14 @@ class MenuActivity : AppCompatActivity() {
                 }
 
                 // DEBUG
-                R.id.debugConfirmed -> {
+                R.id.debugAddReview -> {
 
-                    Toast.makeText(applicationContext, "Entering debug order confirmed fragment...", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "Entering debug add a review fragment...", Toast.LENGTH_SHORT).show()
 
-                    val orderConfirmedFragment = OrderConfirmedFragment()
+                    val addReviewFragment = AddReviewFragment()
 
                     supportFragmentManager.beginTransaction().apply { // begin fragment transaction operation
-                        replace(R.id.frameLayout, orderConfirmedFragment) // replacing the fragment in the frameLayout container of the activity with the shopping cart fragment
+                        replace(R.id.frameLayout, addReviewFragment) // replacing the fragment in the frameLayout container of the activity with the shopping cart fragment
                         addToBackStack(null) // allows you to go back with android back arrow navigation key
                         commit() // applying the replacement operation and commiting the transaction
                     }
