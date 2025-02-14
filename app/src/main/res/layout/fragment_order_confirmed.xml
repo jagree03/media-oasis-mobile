@@ -61,7 +61,7 @@
         android:layout_marginBottom="48dp"
         android:contentDescription="@string/orderConfirmed_Checkmark"
         android:scaleType="fitCenter"
-        android:src="@drawable/checkmark"
+        android:src="@drawable/checkmark_icon"
         app:layout_constraintBottom_toTopOf="@+id/textViewReceiveNotifications"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
