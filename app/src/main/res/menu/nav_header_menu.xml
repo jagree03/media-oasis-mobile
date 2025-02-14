@@ -14,8 +14,8 @@
         android:title="@string/myOrders"/>
 
     <item
-        android:id="@+id/debugCheckout"
-        android:title="debug checkout fragment"/>
+        android:id="@+id/debugConfirmed"
+        android:title="debug order confirmed fragment"/>
 
     <item
         android:id="@+id/logout"
