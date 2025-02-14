@@ -123,9 +123,22 @@ class MenuActivity : AppCompatActivity() {
 
                     builder.create()
                     builder.show()
-
-
                 }
+
+                // DEBUG
+                R.id.debugCheckout -> {
+
+                    Toast.makeText(applicationContext, "Entering debug checkout fragment...", Toast.LENGTH_SHORT).show()
+
+                    val checkOutFragment = CheckOutFragment()
+
+                    supportFragmentManager.beginTransaction().apply { // begin fragment transaction operation
+                        replace(R.id.frameLayout, checkOutFragment) // replacing the fragment in the frameLayout container of the activity with the shopping cart fragment
+                        addToBackStack(null) // allows you to go back with android back arrow navigation key
+                        commit() // applying the replacement operation and commiting the transaction
+                    }
+                }
+
             }
             true // return this lambda expression and return true means click event has been handled
         }

@@ -54,16 +54,14 @@
         android:id="@+id/imageButtonCard"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/cardContentDescription"
         android:scaleType="fitXY"
         android:scaleX="1.2"
         android:scaleY="1.2"
-        android:src="@drawable/credit_debit_card"
+        android:src="@drawable/card_icon"
         app:layout_constraintBottom_toTopOf="@+id/guideline71"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonPayPal"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
@@ -74,15 +72,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="24dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/paypalContentDescription"
         android:scaleType="fitXY"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:src="@drawable/paypal"
+        android:src="@drawable/paypal_icon"
         app:layout_constraintBottom_toTopOf="@+id/guideline71"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toEndOf="@+id/imageButtonCard"
@@ -92,38 +88,46 @@
         android:id="@+id/switch_SavePaymentDetails"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="140dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="64dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:showText="false"
         android:text="@string/save_payment_details"
         android:textAlignment="textStart"
-        android:textColor="@color/grey"
+        android:textColor="@color/white"
         android:textDirection="locale"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewOrderTotal"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
-        tools:layout_editor_absoluteY="532dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCardCVVInput" />
 
     <TextView
         android:id="@+id/textViewOrderTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/ordertotal"
         android:textAlignment="center"
         android:textColor="#F8F5F5"
         android:textSize="19sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="580dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button_pay"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline19" />
 
     <Button
         android:id="@+id/button_pay"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="140dp"
         android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
@@ -131,14 +135,14 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="614dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline19" />
 
     <EditText
         android:id="@+id/editTextCardholderNameInput"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
         android:layout_weight="1"
         android:autofillHints="name"
         android:background="@color/editTextBackground"
@@ -148,43 +152,45 @@
         android:text=""
         android:textColor="@color/grey"
         android:textColorHint="@color/editTextHintColour"
+        android:textSize="17sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewCardholderName"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toEndOf="@+id/textViewCardholderName" />
 
     <TextView
         android:id="@+id/textViewCardholderName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
         android:layout_weight="1"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/cardholder_name"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewCardNumber"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCardholderNameInput"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
-        app:layout_constraintTop_toTopOf="@+id/guideline71" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonCard" />
 
     <TextView
         android:id="@+id/textViewCardNumber"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_weight="1"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/card_number"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewCardExpiration"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCardNumberInput"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
-        tools:layout_editor_absoluteY="386dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCardholderName" />
 
     <EditText
         android:id="@+id/editTextCardNumberInput"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
         android:layout_weight="1"
         android:autofillHints="name"
         android:background="@color/editTextBackground"
@@ -194,14 +200,15 @@
         android:maxLength="16"
         android:textColor="@color/grey"
         android:textColorHint="@color/editTextHintColour"
+        android:textSize="17sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewCardNumber"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toEndOf="@+id/textViewCardNumber" />
 
     <EditText
         android:id="@+id/editTextCardExpirationInput"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
         android:layout_weight="1"
         android:autofillHints="emailAddress"
         android:background="@color/editTextBackground"
@@ -210,28 +217,30 @@
         android:inputType="textEmailAddress"
         android:textColor="@color/grey"
         android:textColorHint="@color/editTextHintColour"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textViewCardCVV"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18" />
+        android:textSize="17sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewCardExpiration"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toEndOf="@+id/textViewCardExpiration" />
 
     <TextView
         android:id="@+id/textViewCardExpiration"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_weight="1"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/card_expiration_date"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewCardCVV"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCardExpirationInput"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
-        tools:layout_editor_absoluteY="433dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCardNumber" />
 
     <EditText
         android:id="@+id/editTextCardCVVInput"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
         android:layout_weight="1"
         android:autofillHints="phone"
         android:background="@color/editTextBackground"
@@ -242,22 +251,25 @@
         android:text=""
         android:textColor="@color/grey"
         android:textColorHint="@color/editTextHintColour"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textViewCardExpiration"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18" />
+        android:textSize="17sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewCardCVV"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toEndOf="@+id/textViewCardCVV" />
 
     <TextView
         android:id="@+id/textViewCardCVV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_weight="1"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/card_security_code"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/switch_SavePaymentDetails"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCardCVVInput"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
-        tools:layout_editor_absoluteY="484dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCardExpiration" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline71"
