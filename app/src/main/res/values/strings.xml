@@ -102,7 +102,7 @@
     <string name="totalProducts">Total Products: 0</string>
     <string name="productID">Product ID: </string>
     <string name="productName">Product Name:</string>
-    <string name="productDescription">Product Description:</string>
+    <string name="productDescription">Product Desc:</string>
     <string name="productPrice">Product Price:</string>
     <string name="productImage">Product Image:</string>
     <string name="productIsAvailable">Is Available?</string>
