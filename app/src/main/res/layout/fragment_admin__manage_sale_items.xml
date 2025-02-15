@@ -55,6 +55,7 @@
         android:id="@+id/listViewSaleItems"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/guideline77"
         app:layout_constraintEnd_toStartOf="@+id/guideline40"
         app:layout_constraintStart_toStartOf="@+id/guideline39"
@@ -81,160 +82,133 @@
 
     <TextView
         android:id="@+id/textViewProductIsAvailable"
-        android:layout_width="0dp"
+        android:layout_width="162dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/productIsAvailable"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/checkBoxIsAvailable"
-        app:layout_constraintStart_toStartOf="@+id/guideline39" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="576dp" />
 
     <EditText
         android:id="@+id/editTextProductId"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="number"
         android:text="@string/zero"
         android:textColor="#08FDF5"
-        app:layout_constraintBottom_toTopOf="@+id/editTextProductName"
-        app:layout_constraintEnd_toStartOf="@+id/guideline40"
-        app:layout_constraintTop_toBottomOf="@+id/listViewSaleItems" />
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="280dp" />
 
     <TextView
         android:id="@+id/textViewProductImage"
-        android:layout_width="0dp"
+        android:layout_width="162dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/productImage"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextProductImage"
-        app:layout_constraintStart_toStartOf="@+id/guideline39" />
+        tools:layout_editor_absoluteY="521dp" />
 
     <TextView
         android:id="@+id/textViewProductPrice"
-        android:layout_width="146dp"
+        android:layout_width="162dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/productPrice"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextProductPrice"
-        app:layout_constraintStart_toStartOf="@+id/guideline39" />
+        tools:layout_editor_absoluteY="464dp" />
 
     <EditText
         android:id="@+id/editTextProductPrice"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:text="@string/itemPrice"
         android:textColor="@color/adminEditTextColour"
-        app:layout_constraintBottom_toTopOf="@+id/editTextProductImage"
-        app:layout_constraintEnd_toStartOf="@+id/guideline40"
-        app:layout_constraintTop_toBottomOf="@+id/editTextProductDescription" />
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="450dp" />
 
     <TextView
         android:id="@+id/textViewProductId"
-        android:layout_width="146dp"
+        android:layout_width="162dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/productID"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextProductId"
-        app:layout_constraintEnd_toStartOf="@+id/editTextProductId"
-        app:layout_constraintStart_toStartOf="@+id/guideline39" />
+        tools:layout_editor_absoluteY="294dp" />
 
     <TextView
         android:id="@+id/textViewProductDescription"
-        android:layout_width="146dp"
+        android:layout_width="162dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/productDescription"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextProductDescription"
-        app:layout_constraintStart_toStartOf="@+id/guideline39" />
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="408dp" />
 
     <EditText
         android:id="@+id/editTextProductDescription"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/productDescription"
         android:textColor="@color/adminEditTextColour"
-        app:layout_constraintBottom_toTopOf="@+id/editTextProductPrice"
-        app:layout_constraintEnd_toStartOf="@+id/guideline40"
-        app:layout_constraintTop_toBottomOf="@+id/editTextProductName" />
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="394dp" />
 
     <TextView
         android:id="@+id/textViewProductName"
-        android:layout_width="146dp"
+        android:layout_width="162dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/productName"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextProductName"
-        app:layout_constraintStart_toStartOf="@+id/guideline39" />
+        tools:layout_editor_absoluteY="351dp" />
 
     <EditText
         android:id="@+id/editTextProductName"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/itemTitle"
         android:textColor="@color/adminEditTextColour"
-        app:layout_constraintBottom_toTopOf="@+id/editTextProductDescription"
-        app:layout_constraintEnd_toStartOf="@+id/guideline40"
-        app:layout_constraintTop_toBottomOf="@+id/editTextProductId" />
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="337dp" />
 
     <EditText
         android:id="@+id/editTextProductImage"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/productImage"
         android:textColor="@color/adminEditTextColour"
-        app:layout_constraintBottom_toTopOf="@+id/checkBoxIsAvailable"
-        app:layout_constraintEnd_toStartOf="@+id/guideline40"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textViewProductImage"
-        app:layout_constraintTop_toBottomOf="@+id/editTextProductPrice" />
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="507dp" />
 
     <CheckBox
         android:id="@+id/checkBoxIsAvailable"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="169dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_updateList"
-        app:layout_constraintEnd_toStartOf="@+id/guideline40"
-        app:layout_constraintTop_toBottomOf="@+id/editTextProductImage" />
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="563dp" />
 
     <Button
         android:id="@+id/button_refreshList"
