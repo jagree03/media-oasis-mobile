@@ -12,14 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="32dp" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline46"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="16dp" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline47"
@@ -37,293 +37,274 @@
 
     <TextView
         android:id="@+id/textViewMenuHeader"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/manageRegisteredAccounts"
         android:textAlignment="center"
         android:textColor="#F8F5F5"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintTop_toTopOf="@+id/guideline45" />
 
     <ListView
         android:id="@+id/listViewAccounts"
-        android:layout_width="360dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="26dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMenuHeader" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline82"
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintTop_toTopOf="@+id/guideline81" />
 
     <TextView
         android:id="@+id/textViewTotalAccounts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="131dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/totalAccounts"
-        android:textColor="@color/white"
+        android:textColor="@color/adminEditTextColour"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewAccounts" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline81"
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMenuHeader" />
 
-    <LinearLayout
-        android:id="@+id/linearLayoutAccountInfo"
-        android:layout_width="350dp"
+    <TextView
+        android:id="@+id/textViewAccountType"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="26dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTotalAccounts">
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/accountType"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountType"
+        tools:layout_editor_absoluteX="27dp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <EditText
+        android:id="@+id/editTextAccountType"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/placeholder"
+        android:textColor="#08FDF5"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="270dp" />
 
-            <TextView
-                android:id="@+id/textViewAccountType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/accountType"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+    <EditText
+        android:id="@+id/editTextAccountLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/placeholder"
+        android:textColor="@color/adminEditTextColour"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="414dp" />
 
-            <EditText
-                android:id="@+id/editTextAccountType"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/placeholder"
-                android:textColor="#08FDF5" />
-        </LinearLayout>
+    <EditText
+        android:id="@+id/editTextAccountEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/placeholder"
+        android:textColor="@color/adminEditTextColour"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="462dp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <EditText
+        android:id="@+id/editTextAccountId"
+        android:layout_width="86dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/zero"
+        android:textColor="@color/adminEditTextColour"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="318dp" />
 
-            <TextView
-                android:id="@+id/textViewProductName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/accountID"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+    <EditText
+        android:id="@+id/editTextAccountPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="@string/placeholder"
+        android:textColor="@color/adminEditTextColour"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="559dp" />
 
-            <EditText
-                android:id="@+id/editTextAccountId"
-                android:layout_width="86dp"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="number"
-                android:text="@string/zero"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
+    <EditText
+        android:id="@+id/editTextAccountUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/placeholder"
+        android:textColor="@color/adminEditTextColour"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="512dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="30dp"
-            tools:layout_editor_absoluteY="494dp">
+    <EditText
+        android:id="@+id/editTextAccountFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/placeholder"
+        android:textColor="@color/adminEditTextColour"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="366dp" />
 
-            <TextView
-                android:id="@+id/textViewAccountFirstName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/accountFirstName"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textViewProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/accountID"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountId"
+        tools:layout_editor_absoluteX="22dp" />
 
-            <EditText
-                android:id="@+id/editTextAccountFirstName"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/placeholder"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
+    <TextView
+        android:id="@+id/textViewAccountFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/accountFirstName"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountFirstName"
+        tools:layout_editor_absoluteX="7dp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/textViewAccountLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/accountLastName"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountLastName"
+        tools:layout_editor_absoluteX="19dp" />
 
-            <TextView
-                android:id="@+id/textViewAccountLastName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/accountLastName"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textViewAccountEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/accountEmailAddress"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountEmail"
+        tools:layout_editor_absoluteX="27dp" />
 
-            <EditText
-                android:id="@+id/editTextAccountLastName"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/placeholder"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
+    <TextView
+        android:id="@+id/textViewAccountUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/accountUsername"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountUsername"
+        tools:layout_editor_absoluteX="26dp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/textViewAccountPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/accountPassword"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountPassword"
+        tools:layout_editor_absoluteX="7dp" />
 
-            <TextView
-                android:id="@+id/textViewAccountEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/accountEmailAddress"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+    <Button
+        android:id="@+id/button_refreshList"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/refreshList"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline46"
+        app:layout_constraintEnd_toStartOf="@+id/button_updateDetails"
+        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintTop_toTopOf="@+id/guideline80" />
 
-            <EditText
-                android:id="@+id/editTextAccountEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:text="@string/placeholder"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
+    <Button
+        android:id="@+id/button_updateDetails"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/updateDetails"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline46"
+        app:layout_constraintEnd_toStartOf="@+id/button_removeAccount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_refreshList"
+        app:layout_constraintTop_toTopOf="@+id/guideline80" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <Button
+        android:id="@+id/button_removeAccount"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/removeAccount"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline46"
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toEndOf="@+id/button_updateDetails"
+        app:layout_constraintTop_toTopOf="@+id/guideline80" />
 
-            <TextView
-                android:id="@+id/textViewAccountUsername"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/accountUsername"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextAccountUsername"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/placeholder"
-                android:textColor="@color/adminEditTextColour" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewAccountPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/accountPassword"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextAccountPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="textPassword"
-                android:text="@string/placeholder"
-                android:textColor="@color/adminEditTextColour" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutButtonBox"
-        android:layout_width="369dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="17dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutAccountInfo">
+        app:layout_constraintGuide_percent="0.84" />
 
-        <Button
-            android:id="@+id/button_refreshList"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:fontFamily="@font/frutiger_fontfamily"
-            android:text="@string/refreshList"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline81"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
 
-        <Button
-            android:id="@+id/button_updateDetails"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:fontFamily="@font/frutiger_fontfamily"
-            android:text="@string/updateDetails"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/button_removeAccount"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:fontFamily="@font/frutiger_fontfamily"
-            android:text="@string/removeAccount"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp" />
-
-    </LinearLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
