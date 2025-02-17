@@ -126,14 +126,14 @@ class MenuActivity : AppCompatActivity() {
                 }
 
                 // DEBUG
-                R.id.debugAddSale -> {
+                R.id.debugManageRegAccounts -> {
 
-                    Toast.makeText(applicationContext, "Entering debug add new sale item fragment...", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "Entering debug manage reg accounts...", Toast.LENGTH_SHORT).show()
 
-                    val addSaleFragment = Admin_AddNewSaleItem()
+                    val manageRegAccounts = Admin_ManageRegisteredAccountsFragment()
 
                     supportFragmentManager.beginTransaction().apply { // begin fragment transaction operation
-                        replace(R.id.frameLayout, addSaleFragment) // replacing the fragment in the frameLayout container of the activity with the shopping cart fragment
+                        replace(R.id.frameLayout, manageRegAccounts) // replacing the fragment in the frameLayout container of the activity with the shopping cart fragment
                         addToBackStack(null) // allows you to go back with android back arrow navigation key
                         commit() // applying the replacement operation and commiting the transaction
                     }
