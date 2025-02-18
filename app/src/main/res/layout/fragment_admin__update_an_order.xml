@@ -13,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="32dp" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline54"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="16dp" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline55"
@@ -40,239 +40,235 @@
         android:id="@+id/textViewMenuHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/updateAnOrder"
         android:textAlignment="center"
         android:textColor="#F8F5F5"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/listViewOrderDetailsRecords"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline86"
+        app:layout_constraintEnd_toStartOf="@+id/guideline55"
+        app:layout_constraintStart_toStartOf="@+id/guideline56"
+        app:layout_constraintTop_toTopOf="@+id/guideline53" />
 
     <ListView
         android:id="@+id/listViewOrderDetailsRecords"
-        android:layout_width="360dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayoutOrderDetailsInfo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline87"
+        app:layout_constraintEnd_toStartOf="@+id/guideline55"
+        app:layout_constraintStart_toStartOf="@+id/guideline56"
+        app:layout_constraintTop_toTopOf="@+id/guideline86" />
 
-    <LinearLayout
-        android:id="@+id/linearLayoutOrderDetailsInfo"
-        android:layout_width="350dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline86"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="22dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayoutButtonBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewOrderDetailsID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/orderDetailsID"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextOrderDetailsID"
-                android:layout_width="86dp"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="number"
-                android:text="@string/zero"
-                android:textColor="#08FDF5" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewOrderID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/orderID"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextOrderID"
-                android:layout_width="86dp"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="number"
-                android:text="@string/zero"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="30dp"
-            tools:layout_editor_absoluteY="494dp">
-
-            <TextView
-                android:id="@+id/textViewProductID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/productID"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextProductID"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="number"
-                android:text="@string/zero"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewProductName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/productName"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextProductName"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/placeholder"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewProductQuantity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/productQuantity"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextProductQuantity"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="number"
-                android:text="@string/zero"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewProductCost"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/productCost"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextProductCost"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:text="@string/zero"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutButtonBox"
-        android:layout_width="369dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="82dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_editor_absoluteX="22dp"
-        app:layout_editor_absoluteY="600dp">
+        app:layout_constraintGuide_percent="0.21" />
 
-        <Button
-            android:id="@+id/button_updateOrder"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:fontFamily="@font/frutiger_fontfamily"
-            android:text="@string/updateOrder"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
 
-        <Button
-            android:id="@+id/button_removeItemFromOrder"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:fontFamily="@font/frutiger_fontfamily"
-            android:text="@string/removeItemFromOrder"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp" />
+    <EditText
+        android:id="@+id/editTextProductID"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/zero"
+        android:textColor="@color/adminEditTextColour"
+        app:layout_constraintEnd_toStartOf="@+id/guideline55"
+        app:layout_constraintStart_toEndOf="@+id/textViewProductID"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOrderID" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textViewOrderDetailsID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/orderDetailsID"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextOrderDetailsID"
+        app:layout_constraintEnd_toStartOf="@+id/editTextOrderDetailsID"
+        app:layout_constraintStart_toStartOf="@+id/guideline56" />
+
+    <EditText
+        android:id="@+id/editTextOrderDetailsID"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/zero"
+        android:textColor="#08FDF5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline55"
+        app:layout_constraintStart_toEndOf="@+id/textViewOrderDetailsID"
+        app:layout_constraintTop_toTopOf="@+id/guideline87" />
+
+    <TextView
+        android:id="@+id/textViewOrderID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/orderID"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextOrderID"
+        app:layout_constraintEnd_toStartOf="@+id/editTextOrderID"
+        app:layout_constraintStart_toStartOf="@+id/guideline56" />
+
+    <EditText
+        android:id="@+id/editTextOrderID"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/zero"
+        android:textColor="@color/adminEditTextColour"
+        app:layout_constraintEnd_toStartOf="@+id/guideline55"
+        app:layout_constraintStart_toEndOf="@+id/textViewOrderID"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOrderDetailsID" />
+
+    <TextView
+        android:id="@+id/textViewProductID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/productID"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextProductID"
+        app:layout_constraintEnd_toStartOf="@+id/editTextProductID"
+        app:layout_constraintStart_toStartOf="@+id/guideline56" />
+
+    <EditText
+        android:id="@+id/editTextProductName"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/placeholder"
+        android:textColor="@color/adminEditTextColour"
+        app:layout_constraintEnd_toStartOf="@+id/guideline55"
+        app:layout_constraintStart_toEndOf="@+id/textViewProductName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextProductID" />
+
+    <TextView
+        android:id="@+id/textViewProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/productName"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextProductName"
+        app:layout_constraintEnd_toStartOf="@+id/editTextProductName"
+        app:layout_constraintStart_toStartOf="@+id/guideline56" />
+
+    <EditText
+        android:id="@+id/editTextProductCost"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/zero"
+        android:textColor="@color/adminEditTextColour"
+        app:layout_constraintEnd_toStartOf="@+id/guideline55"
+        app:layout_constraintStart_toEndOf="@+id/textViewProductCost"
+        app:layout_constraintTop_toBottomOf="@+id/editTextProductName" />
+
+    <TextView
+        android:id="@+id/textViewProductCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/productCost"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextProductCost"
+        app:layout_constraintEnd_toStartOf="@+id/editTextProductCost"
+        app:layout_constraintStart_toStartOf="@+id/guideline56" />
+
+    <EditText
+        android:id="@+id/editTextProductQuantity"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/zero"
+        android:textColor="@color/adminEditTextColour"
+        app:layout_constraintEnd_toStartOf="@+id/guideline55"
+        app:layout_constraintStart_toEndOf="@+id/textViewProductQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/editTextProductCost" />
+
+    <TextView
+        android:id="@+id/textViewProductQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/productQuantity"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextProductQuantity"
+        app:layout_constraintEnd_toStartOf="@+id/editTextProductQuantity"
+        app:layout_constraintStart_toStartOf="@+id/guideline56" />
+
+    <Button
+        android:id="@+id/button_removeItemFromOrder"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/removeItemFromOrder"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline54"
+        app:layout_constraintEnd_toStartOf="@+id/guideline55"
+        app:layout_constraintStart_toEndOf="@+id/button_updateOrder"
+        app:layout_constraintTop_toTopOf="@+id/guideline88" />
+
+    <Button
+        android:id="@+id/button_updateOrder"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/updateOrder"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline54"
+        app:layout_constraintEnd_toStartOf="@+id/button_removeItemFromOrder"
+        app:layout_constraintStart_toStartOf="@+id/guideline56"
+        app:layout_constraintTop_toTopOf="@+id/guideline88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.81" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
