@@ -37,14 +37,14 @@
 
     <TextView
         android:id="@+id/textViewMenuHeader"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/manageRegisteredAccounts"
         android:textAlignment="center"
         android:textColor="#F8F5F5"
-        android:textSize="28sp"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline47"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
@@ -83,84 +83,92 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountType"
-        tools:layout_editor_absoluteX="27dp" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextAccountType"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
     <EditText
         android:id="@+id/editTextAccountType"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/placeholder"
         android:textColor="#08FDF5"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="270dp" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toEndOf="@+id/textViewAccountType"
+        app:layout_constraintTop_toTopOf="@+id/guideline82" />
 
     <EditText
         android:id="@+id/editTextAccountLastName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/placeholder"
         android:textColor="@color/adminEditTextColour"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="414dp" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toEndOf="@+id/textViewAccountLastName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAccountFirstName" />
 
     <EditText
         android:id="@+id/editTextAccountEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="@string/placeholder"
         android:textColor="@color/adminEditTextColour"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="462dp" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toEndOf="@+id/textViewAccountEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAccountLastName" />
 
     <EditText
         android:id="@+id/editTextAccountId"
-        android:layout_width="86dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="number"
         android:text="@string/zero"
         android:textColor="@color/adminEditTextColour"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="318dp" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toEndOf="@+id/textViewProductName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAccountType" />
 
     <EditText
         android:id="@+id/editTextAccountPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPassword"
         android:text="@string/placeholder"
         android:textColor="@color/adminEditTextColour"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="559dp" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toEndOf="@+id/textViewAccountPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAccountUsername" />
 
     <EditText
         android:id="@+id/editTextAccountUsername"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/placeholder"
         android:textColor="@color/adminEditTextColour"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="512dp" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toEndOf="@+id/textViewAccountUsername"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAccountEmail" />
 
     <EditText
         android:id="@+id/editTextAccountFirstName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/placeholder"
         android:textColor="@color/adminEditTextColour"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="366dp" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline47"
+        app:layout_constraintStart_toEndOf="@+id/textViewAccountFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAccountId" />
 
     <TextView
         android:id="@+id/textViewProductName"
@@ -172,7 +180,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountId"
-        tools:layout_editor_absoluteX="22dp" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextAccountId"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
     <TextView
         android:id="@+id/textViewAccountFirstName"
@@ -184,7 +193,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountFirstName"
-        tools:layout_editor_absoluteX="7dp" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextAccountFirstName"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
     <TextView
         android:id="@+id/textViewAccountLastName"
@@ -196,7 +206,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountLastName"
-        tools:layout_editor_absoluteX="19dp" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextAccountLastName"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
     <TextView
         android:id="@+id/textViewAccountEmail"
@@ -208,7 +219,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountEmail"
-        tools:layout_editor_absoluteX="27dp" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextAccountEmail"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
     <TextView
         android:id="@+id/textViewAccountUsername"
@@ -220,7 +232,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountUsername"
-        tools:layout_editor_absoluteX="26dp" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextAccountUsername"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
     <TextView
         android:id="@+id/textViewAccountPassword"
@@ -232,13 +245,14 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextAccountPassword"
-        tools:layout_editor_absoluteX="7dp" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextAccountPassword"
+        app:layout_constraintStart_toStartOf="@+id/guideline48" />
 
     <Button
         android:id="@+id/button_refreshList"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
@@ -255,7 +269,7 @@
         android:id="@+id/button_updateDetails"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
@@ -273,7 +287,7 @@
         android:id="@+id/button_removeAccount"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
@@ -291,7 +305,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.84" />
+        app:layout_constraintGuide_percent="0.85" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline81"
@@ -305,6 +319,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.37" />
+        app:layout_constraintGuide_percent="0.32" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
