@@ -126,14 +126,14 @@ class MenuActivity : AppCompatActivity() {
                 }
 
                 // DEBUG
-                R.id.debugManagePaymentData -> {
+                R.id.debugManageReviews -> {
 
-                    Toast.makeText(applicationContext, "Entering manage payment data...", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "Entering manage reviews...", Toast.LENGTH_SHORT).show()
 
-                    val managePaymentData = Admin_ManagePaymentDataFragment()
+                    val manageReviews = Admin_ManageReviewsFragment()
 
                     supportFragmentManager.beginTransaction().apply { // begin fragment transaction operation
-                        replace(R.id.frameLayout, managePaymentData) // replacing the fragment in the frameLayout container of the activity with the shopping cart fragment
+                        replace(R.id.frameLayout, manageReviews) // replacing the fragment in the frameLayout container of the activity with the shopping cart fragment
                         addToBackStack(null) // allows you to go back with android back arrow navigation key
                         commit() // applying the replacement operation and commiting the transaction
                     }
