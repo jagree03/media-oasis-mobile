@@ -142,7 +142,7 @@
     <string name="paymentType">Payment Type:</string>
     <string name="paymentDate">Payment Date:</string>
     <string name="paymentAmount">Amount:</string>
-    <string name="totalPaidToMediaOasis">Total paid to Media Oasis: £0.00</string>
+    <string name="totalPaidToMediaOasis">Total revenue: £0.00</string>
 
     <!-- Manage Reviews -->
     <string name="totalReviews">Total reviews: 0</string>
