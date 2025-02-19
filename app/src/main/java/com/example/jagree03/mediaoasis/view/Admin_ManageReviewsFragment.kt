@@ -1,10 +1,15 @@
 package com.example.jagree03.mediaoasis
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.RatingBar
+import androidx.core.widget.doOnTextChanged
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +40,35 @@ class Admin_ManageReviewsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_admin__manage_reviews, container, false)
+    }
+
+    @Override
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val editTextStarRatingValue = view.findViewById<EditText>(R.id.editTextStarRatingValue)
+        val ratingBarReviewRating = view.findViewById<RatingBar>(R.id.ratingBarReviewRating)
+
+        /**
+         * This code was adapted from a stack overflow post https://stackoverflow.com/questions/40569436/kotlin-addtextchangelistener-lambda
+         * which discusses the use of the addTextChangedListener within Kotlin.
+         * It uses a TextWatcher object that has an interface containing 3 methods.
+         * Modifying the onTextChanged() method allows you to perform specific behaviours when the text is modified in the EditText element.
+         */
+        editTextStarRatingValue.addTextChangedListener(object: TextWatcher {
+            override fun afterTextChanged(s: Editable?) { }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val text = editTextStarRatingValue.text.toString()
+
+                if (text.isNotEmpty()) {
+                    ratingBarReviewRating.rating = text.toFloat()
+                }
+
+            }
+        })
     }
 
     companion object {
