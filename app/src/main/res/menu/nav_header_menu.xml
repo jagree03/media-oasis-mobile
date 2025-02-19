@@ -14,8 +14,8 @@
         android:title="@string/myOrders"/>
 
     <item
-        android:id="@+id/debugUpdateOrder"
-        android:title="debug update order"/>
+        android:id="@+id/debugManagePaymentData"
+        android:title="debug manage payment data"/>
 
     <item
         android:id="@+id/logout"
