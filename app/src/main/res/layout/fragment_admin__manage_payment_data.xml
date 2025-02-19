@@ -26,222 +26,73 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="32dp" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline58"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="16dp" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <TextView
         android:id="@+id/textViewMenuHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/managePaymentRecords"
         android:textAlignment="center"
         android:textColor="#F8F5F5"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toStartOf="@+id/guideline59"
+        app:layout_constraintTop_toTopOf="@+id/guideline57" />
 
     <ListView
         android:id="@+id/listViewPaymentRecords"
-        android:layout_width="360dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="26dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMenuHeader" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline90"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toStartOf="@+id/guideline59"
+        app:layout_constraintTop_toTopOf="@+id/guideline89" />
 
     <TextView
         android:id="@+id/textViewTotalDataRecords"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="131dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/totalDataRecords"
-        android:textColor="@color/white"
+        android:textColor="@color/adminEditTextColour"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewPaymentRecords" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline89"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toStartOf="@+id/guideline59"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMenuHeader" />
 
     <TextView
         android:id="@+id/textViewTotalPaidToMediaOasis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="30dp"
         android:fontFamily="@font/frutiger_fontfamily"
         android:text="@string/totalPaidToMediaOasis"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_refreshList"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/linearLayoutPaymentDataInfo"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="26dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTotalDataRecords">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewPaymentID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/paymentID"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextPaymentID"
-                android:layout_width="86dp"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="number"
-                android:text="@string/zero"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewOrderID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/orderID"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextOrderID"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="number"
-                android:text="@string/zero"
-                android:textColor="#08FDF5" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="30dp"
-            tools:layout_editor_absoluteY="494dp">
-
-            <TextView
-                android:id="@+id/textViewPaymentType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/paymentType"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextPaymentType"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/placeholder"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewPaymentDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/paymentDate"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextPaymentDate"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="date"
-                android:text="@string/placeholder"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewAmount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/frutiger_fontfamily"
-                android:text="@string/paymentAmount"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editTextAmount"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:text="@string/zero"
-                android:textColor="@color/adminEditTextColour" />
-        </LinearLayout>
-
-    </LinearLayout>
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline91"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toStartOf="@+id/guideline59"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAmount" />
 
     <Button
         android:id="@+id/button_refreshList"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="103dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginEnd="154dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         android:layout_weight="1"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/frutiger_fontfamily"
@@ -249,8 +100,156 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline58"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toStartOf="@+id/guideline59"
+        app:layout_constraintTop_toTopOf="@+id/guideline91" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline89"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.84" />
+
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/zero"
+        android:textColor="@color/adminEditTextColour"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toEndOf="@+id/textViewAmount"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPaymentDate" />
+
+    <TextView
+        android:id="@+id/textViewAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/paymentAmount"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextAmount"
+        app:layout_constraintEnd_toStartOf="@+id/editTextAmount"
+        app:layout_constraintStart_toStartOf="@+id/guideline59" />
+
+    <EditText
+        android:id="@+id/editTextPaymentType"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/placeholder"
+        android:textColor="@color/adminEditTextColour"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toEndOf="@+id/textViewPaymentType"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPaymentID" />
+
+    <TextView
+        android:id="@+id/textViewPaymentType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/paymentType"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextPaymentType"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPaymentType"
+        app:layout_constraintStart_toStartOf="@+id/guideline59" />
+
+    <EditText
+        android:id="@+id/editTextOrderID"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/zero"
+        android:textColor="#08FDF5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toEndOf="@+id/textViewOrderID"
+        app:layout_constraintTop_toTopOf="@+id/guideline90" />
+
+    <TextView
+        android:id="@+id/textViewOrderID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/orderID"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextOrderID"
+        app:layout_constraintEnd_toStartOf="@+id/editTextOrderID"
+        app:layout_constraintStart_toStartOf="@+id/guideline59" />
+
+    <EditText
+        android:id="@+id/editTextPaymentID"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/zero"
+        android:textColor="@color/adminEditTextColour"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toEndOf="@+id/textViewPaymentID"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOrderID" />
+
+    <TextView
+        android:id="@+id/textViewPaymentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/paymentID"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextPaymentID"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPaymentID"
+        app:layout_constraintStart_toStartOf="@+id/guideline59" />
+
+    <EditText
+        android:id="@+id/editTextPaymentDate"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="@string/placeholder"
+        android:textColor="@color/adminEditTextColour"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toEndOf="@+id/textViewPaymentDate"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPaymentType" />
+
+    <TextView
+        android:id="@+id/textViewPaymentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger_fontfamily"
+        android:text="@string/paymentDate"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextPaymentDate"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPaymentDate"
+        app:layout_constraintStart_toStartOf="@+id/guideline59" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
