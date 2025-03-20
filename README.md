@@ -10,6 +10,8 @@ of coffee, biscuits and drinks.
 
 Media Oasis aims to be a general improvement over my previous project, Café Oasis. 
 
+Early development & planning began in August 2024
+
 Such improvements include
 - Improved UI/UX design with a gentle purple colour, white text and sleek 2000s Frutiger font
 - Implementation of a slidable navigation view menu
